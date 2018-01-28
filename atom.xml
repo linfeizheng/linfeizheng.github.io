@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-01-27T13:21:56.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用hexo做的第一个demo</title>
+    <link href="http://yoursite.com/2017/01/27/title/"/>
+    <id>http://yoursite.com/2017/01/27/title/</id>
+    <published>2017-01-27T12:35:52.000Z</published>
+    <updated>2018-01-27T13:21:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>markdown使用说明</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;markdown使用说明&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+</feed>

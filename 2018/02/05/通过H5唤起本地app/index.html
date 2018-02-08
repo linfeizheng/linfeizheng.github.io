@@ -1,213 +1,200 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>
-        
-        通过H5唤起本地app · zhenglinfei.cn
-        
-    </title>
-    <link rel="icon" href= /assets/favicon.ico>
-    <!-- TODO: 在font-face加载完毕后改变字体  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-    <!-- 提前加载place holder  -->
-    <style type="text/css">
-        @font-face {
-            font-family: 'Oswald-Regular';
-            src: url(/font/Oswald-Regular.ttf);
-        }
-    </style>
-    <style type="text/css">
-        .site-intro {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            overflow: hidden;
-            box-shadow: -0.1rem 0 0.5rem 0 rgba(0, 0, 0, 0.5);
-        }
-        .site-intro-placeholder {
-            position: absolute;
-            z-index: -2;
-            top: 0;
-            left: 0px;
-            width: calc(100% + 300px);
-            height: 100%;
-            background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-            background-position: center center;
-            transform: translate3d(-226px, 0, 0);
-            animation: gradient-move 2.5s ease-out 0s 1;
-        }
-        @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-</style>
-    <link rel="stylesheet" href = /css/style.css?v=20180120 />
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+<head>
     
-    <script src="/scripts/main.js" defer></script>
-    <!-- 百度统计  -->
+
     
-    <!-- 谷歌统计  -->
+
     
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>通过H5唤起本地app | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="其他">
+    <meta name="description" content="在安卓手机的浏览器中调起本地app">
+<meta name="keywords" content="其他">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过H5唤起本地app">
+<meta property="og:url" content="http://yoursite.com/2018/02/05/通过H5唤起本地app/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在安卓手机的浏览器中调起本地app">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-08T14:01:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="通过H5唤起本地app">
+<meta name="twitter:description" content="在安卓手机的浏览器中调起本地app">
+    
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
 </head>
 
-    
-        <body class="post-body">
-    
-    
-<header class="header">
+<body>
+    <div id="loading" class="active"></div>
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >linfeizheng</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">通过H5唤起本地app</a>
-            </div>
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">郑林飞</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
     </div>
-    
-    <a class="home-link" href=/>linfeizheng</a>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">通过H5唤起本地app</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
 </header>
-    <div class="wrapper">
-        <div class="site-intro">
-    
-    <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
-            
-    <div class="site-intro-img" style="background-image: url(/avatar/post-bg.jpg)"></div>
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-            通过H5唤起本地app
-            <!-- 404 -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-            
-            <!-- 404 -->
-            
-        </p>
-        <!-- 文章页meta -->
-        
-            <!-- 文章页标签  -->
-            
-                <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 其他>其他</a>
-    
-</div>
-            
-            <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = "/static/api/js/share.js"];</script>
-            <div class="post-intro-meta">
-                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/02/05</span>
-                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                    <span class="iconfont-archer">&#xe604;</span>
-                    <span id="busuanzi_value_page_pv"></span>
-                </span>
-                <span class="shareWrapper">
-                    <span class="iconfont-archer shareIcon">
-                        &#xe601;
-                    </span>
-                    <span class="bdsharebuttonbox">
-                        <a href="#" class="bds_more shareText" data-cmd="more">Share</a>
-                    </span>
-                </span>
-            </div>
-        
-    </div>
-</div>
-        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
-        <script>
-            var browser = {
-                    versions: function () {
-                        var u = window.navigator.userAgent;
-                        return {
-                            userAgent: u,
-                            trident: u.indexOf('Trident') > -1, //IE内核
-                            presto: u.indexOf('Presto') > -1, //opera内核
-                            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-                            iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-                            iPad: u.indexOf('iPad') > -1, //是否为iPad
-                            webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-                            weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-                            uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
-                        };
-                    }()
-                }
+<header class="content-header post-header">
 
-            function fontLoaded(){
-                console.log('font loaded');
-                if (document.getElementsByClassName('site-intro-meta')) {
-                    document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
-                    document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
-                    var postIntroTags = document.getElementsByClassName('post-intro-tags')[0],
-                        postIntroMeat = document.getElementsByClassName('post-intro-meta')[0];
-                        if (postIntroTags) {
-                            postIntroTags.classList.add('post-fade-in');
-                        }
-                        if (postIntroMeat) {
-                            postIntroMeat.classList.add('post-fade-in');
-                        }
-                    }
-                }
-                
-            console.log("userAgent:" + browser.versions.userAgent);
-            // UC不支持跨域，所以直接显示
-            if (browser.versions.uc) {
-                console.log("UCBrowser");
-                fontLoaded();
-            } else {
-                WebFont.load({
-                    custom: {
-                        families: ['Oswald-Regular']
-                    },
-                    loading: function () {  //所有字体开始加载
-                        // console.log('loading');
-                    },
-                    active: function () {  //所有字体已渲染
-                        fontLoaded();
-                    },
-                    inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
-                        console.log('inactive: timeout');
-                        fontLoaded();
-                    },
-                    timeout: 7000 // Set the timeout to two seconds
-                });
-            }
-        </script>
-        <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <p>H5如何打开或者说唤起手机本地的app，有以下两种：</p>
+    <div class="container fade-scale">
+        <h1 class="title">通过H5唤起本地app</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-02-05T13:33:43.000Z" itemprop="datePublished" class="page-time">
+  2018-02-05
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-通过H5唤起本地app"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">通过H5唤起本地app</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-02-05 21:33" datetime="2018-02-05T13:33:43.000Z"  itemprop="datePublished">2018-02-05</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>在安卓手机的浏览器中调起本地app<br><a id="more"></a><br>H5如何打开或者说唤起手机本地的app，有以下两种：</p>
 <p>第一种方式：</p>
 <p>通过在html的a标签里面的href中直接配置android端的schema，当然，如果有host其他的配置，跟在后面就可以了，android端配置和代码如下：</p>
-<p>android端配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:name = &quot;.MainActivity&quot;&gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;action android:name = &quot;android.intent.action.MAIN&quot;/&gt;</span><br><span class="line">        &lt;category android:name = &quot;android.intent.category.LAUNCHER&quot;/&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;action android:name=&quot;android.intent.action.VIEW&quot;/&gt;</span><br><span class="line">        &lt;category android:name=&quot;android.intent.category.DEFAULT&quot;/&gt;</span><br><span class="line">        &lt;category android:name=&quot;android.intent.category.BROWSABLE&quot;/&gt;</span><br><span class="line">        &lt;data android:host=&quot;jingewenku.com&quot;</span><br><span class="line">           android:scheme=&quot;abraham&quot;/&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure></p>
+<p>android端配置：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:name = <span class="string">".MainActivity"</span>&gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;action android:name = <span class="string">"android.intent.action.MAIN"</span>/&gt;</span><br><span class="line">        &lt;category android:name = <span class="string">"android.intent.category.LAUNCHER"</span>/&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;action android:name=<span class="string">"android.intent.action.VIEW"</span>/&gt;</span><br><span class="line">        &lt;category android:name=<span class="string">"android.intent.category.DEFAULT"</span>/&gt;</span><br><span class="line">        &lt;category android:name=<span class="string">"android.intent.category.BROWSABLE"</span>/&gt;</span><br><span class="line">        &lt;data android:host=<span class="string">"baidu.com"</span></span><br><span class="line">           android:scheme=<span class="string">"testapp"</span>/&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure></p>
 <p>注：如果这个是配置在启动页要和标签并列在一起，不然运行后手机app的图标会没有；注意schema协议要小写,否则会有不能响应的异常!</p>
 <p>html代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">        &lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">    	&lt;a href=&quot;abraham://jingewenku.com/?pid=1&quot;&gt;打开app&lt;/a&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"testapp://baidu.com/?pid=1"</span>&gt;</span>打开app<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这里我们来看看schema拼接协议的格式：</p>
 <p>&lt; a href=”[scheme]://[host]/[path]?[query]”&gt;启动应用程序&lt; /a&gt;</p>
 <p>各个项目含义如下所示：</p>
@@ -216,13 +203,13 @@
 <p>path：传值时必须的key ※没有也可以</p>
 <p>query：获取值的Key和Value ※没有也可以</p>
 <p>以上就能实现打开本地的app了，当然是在app存在的情况下，否则的话没有反应。</p>
-<p>大家可能会问上面的html代码中配置的不是android里面配置的schema协议吗？我明明没有配置pid，为什么要写这个呢？这是因为我们有些时候在唤起本地app的时候可能会向app传递一些参数，这些参数我们就可以配置在这里，我们只需要在oncreate里面获取就可以了。</p>
+<p>我们有些时候在唤起本地app的时候可能会向app传递一些参数，这些参数我们就可以配置在path或者query里，我们只需要在oncreate里面获取就可以了。</p>
 <p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = getIntent();</span><br><span class="line">    Uri uri = intent.getData();</span><br><span class="line">    if (uri != null) &#123;</span><br><span class="line">        String pid = uri.getQueryParameter(&quot;pid&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = getIntent();</span><br><span class="line">    Uri uri = intent.getData();</span><br><span class="line">    <span class="keyword">if</span> (uri != <span class="keyword">null</span>) &#123;</span><br><span class="line">        String pid = uri.getQueryParameter(<span class="string">"pid"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果还想要获取android里面配置的schema协议的话，还可以这样:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Uri uri = getIntent().getData();</span><br><span class="line">if(uri != null) &#123; </span><br><span class="line">    // 完整的url信息</span><br><span class="line">    String url = uri.toString();</span><br><span class="line">    Log.e(TAG, &quot;url: &quot;  + uri); </span><br><span class="line">    // scheme部分</span><br><span class="line">    String scheme = uri.getScheme();</span><br><span class="line">    Log.e(TAG, &quot;scheme: &quot;  + scheme); </span><br><span class="line">    // host部分</span><br><span class="line">    String host = uri.getHost();</span><br><span class="line">    Log.e(TAG, &quot;host: &quot;  + host); </span><br><span class="line">    //port部分</span><br><span class="line">    int port = uri.getPort();</span><br><span class="line">    Log.e(TAG, &quot;host: &quot;  + port); </span><br><span class="line">    // 访问路劲</span><br><span class="line">    String path = uri.getPath();</span><br><span class="line">    Log.e(TAG, &quot;path: &quot;  + path);</span><br><span class="line">    List&lt;String&gt; pathSegments = uri.getPathSegments(); </span><br><span class="line">    // Query部分</span><br><span class="line">    String query = uri.getQuery();</span><br><span class="line">    Log.e(TAG, &quot;query: &quot;  + query); </span><br><span class="line">    //获取指定参数值</span><br><span class="line">    String goodsId = uri.getQueryParameter(&quot;goodsId&quot;);</span><br><span class="line">    Log.e(TAG, &quot;goodsId: &quot;  + goodsId);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Uri uri = getIntent().getData();</span><br><span class="line"><span class="keyword">if</span>(uri != <span class="keyword">null</span>) &#123; </span><br><span class="line">    <span class="comment">// 完整的url信息</span></span><br><span class="line">    String url = uri.toString();</span><br><span class="line">    Log.e(TAG, <span class="string">"url: "</span>  + uri); </span><br><span class="line">    <span class="comment">// scheme部分</span></span><br><span class="line">    String scheme = uri.getScheme();</span><br><span class="line">    Log.e(TAG, <span class="string">"scheme: "</span>  + scheme); </span><br><span class="line">    <span class="comment">// host部分</span></span><br><span class="line">    String host = uri.getHost();</span><br><span class="line">    Log.e(TAG, <span class="string">"host: "</span>  + host); </span><br><span class="line">    <span class="comment">//port部分</span></span><br><span class="line">    <span class="keyword">int</span> port = uri.getPort();</span><br><span class="line">    Log.e(TAG, <span class="string">"host: "</span>  + port); </span><br><span class="line">    <span class="comment">// 访问路径</span></span><br><span class="line">    String path = uri.getPath();</span><br><span class="line">    Log.e(TAG, <span class="string">"path: "</span>  + path);</span><br><span class="line">    List&lt;String&gt; pathSegments = uri.getPathSegments(); </span><br><span class="line">    <span class="comment">// Query部分</span></span><br><span class="line">    String query = uri.getQuery();</span><br><span class="line">    Log.e(TAG, <span class="string">"query: "</span>  + query); </span><br><span class="line">    <span class="comment">//获取指定参数值</span></span><br><span class="line">    String pid = uri.getQueryParameter(<span class="string">"pid"</span>);</span><br><span class="line">    Log.e(TAG, <span class="string">"pid: "</span>  + pid);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如何判断一个Schema是否有效 :</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PackageManager packageManager = getPackageManager();</span><br><span class="line">Intent intent = newIntent(Intent.ACTION_VIEW, Uri.parse(&quot;abraham://jingewenku.com:8888/goodsDetail?goodsId=10011002&quot;));</span><br><span class="line">List&lt;ResolveInfo&gt; activities = packageManager.queryIntentActivities(intent, 0);</span><br><span class="line">booleanisValid = !activities.isEmpty();</span><br><span class="line">if(isValid) &#123;</span><br><span class="line">    startActivity(intent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PackageManager packageManager = getPackageManager();</span><br><span class="line">Intent intent = newIntent(Intent.ACTION_VIEW, Uri.parse(<span class="string">"testapp://baidu.com:80/article?goodsId=10011002"</span>));</span><br><span class="line">List&lt;ResolveInfo&gt; activities = packageManager.queryIntentActivities(intent, <span class="number">0</span>);</span><br><span class="line">booleanisValid = !activities.isEmpty();</span><br><span class="line"><span class="keyword">if</span>(isValid) &#123;</span><br><span class="line">    startActivity(intent);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种方式也是我百度到的最多的方式，但是这样就带来了一个问题了，上面的需求说的是“在页面上有一个连接， 如果用户安装了APP，则点击打开对应的APP；如果用户没有安装，则点击打开对应的设置连接”，这明显就不符合需求了，这只能作为一些个别需求来使用了。</p>
 <p>第二种方式：</p>
 <p>既然通过在href配置schema协议不行，那就只能通过js代码来实现了，只有这样才能根据判断实现app有的时候就打开，没有的时候就跳转到下载链接下载。</p>
@@ -230,176 +217,301 @@
 <p>1.直接唤醒</p>
 <p>说明：通过h5可换醒app，如访问一个URL，点击按钮，打开应用，如果该应用APP没有安装，那么直接跳转到App Store的APP下载页面，通过点击的方式兼容性较好，如果安装了app，在手机各大浏览器(360浏览器、uc浏览器、搜狗浏览器、QQ浏览器、百度浏览器 )和QQ客户端中，能唤醒。微信、新浪微博客户端、腾讯微博客户端无法唤醒。</p>
 <p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;html xmlns=http://www.w3.org/1999/xhtml&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=Content-Type content=&quot;text/html;charset=utf-8&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;script src=&quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;title&gt;点击唤醒demo&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;style&gt;#zjmobliestart&#123;font-size:40px;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--</span><br><span class="line">说明：通过h5可换醒app，如访问一个URL，点击按钮，打开应用，如果该应用APP没有安装，那么直接跳转到App Store的APP下载页面，通过点击的方式。兼容性较好，如果安装了app，在手机各大浏览器(360浏览器 uc浏览器 搜狗浏览器 QQ浏览器 百度浏览器 )和</span><br><span class="line">QQ客户端中，能唤醒。微信 新浪微博客户端 腾讯微博客户端无法唤醒。</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;zjmobile://platformapi/startapp&quot; id=&quot;zjmobliestart&quot; target=&quot;_blank&quot;&gt;唤醒浙江移动手机营业厅！&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt; </span><br><span class="line">function applink()&#123;  </span><br><span class="line">    return function()&#123;  </span><br><span class="line">        var clickedAt = +new Date;  </span><br><span class="line">         setTimeout(function()&#123;</span><br><span class="line">             !window.document.webkitHidden &amp;&amp; setTimeout(function()&#123; </span><br><span class="line">                   if (+new Date - clickedAt &lt; 2000)&#123;  </span><br><span class="line">                       window.location = &apos;https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com&apos;;  </span><br><span class="line">                   &#125;  </span><br><span class="line">             &#125;, 500);       </span><br><span class="line">         &#125;, 500)   </span><br><span class="line">    &#125;;  </span><br><span class="line">&#125;  </span><br><span class="line">document.getElementById(&quot;zjmobliestart&quot;).onclick = applink();  </span><br><span class="line">&lt;/script&gt;   </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">http://www.w3.org/1999/xhtml</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">Content-Type</span> <span class="attr">content</span>=<span class="string">"text/html;charset=utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://libs.baidu.com/jquery/1.9.0/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>点击唤醒demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined">#zjmobliestart&#123;font-size:40px;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">说明：通过h5可换醒app，如访问一个URL，点击按钮，打开应用，如果该应用APP没有安装，那么直接跳转到App Store的APP下载页面，通过点击的方式。兼容性较好，如果安装了app，在手机各大浏览器(360浏览器 uc浏览器 搜狗浏览器 QQ浏览器 百度浏览器 )和</span></span><br><span class="line"><span class="comment">QQ客户端中，能唤醒。微信 新浪微博客户端 腾讯微博客户端无法唤醒。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"zjmobile://platformapi/startapp"</span> <span class="attr">id</span>=<span class="string">"zjmobliestart"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>唤醒浙江移动手机营业厅！<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">function applink()&#123;  </span></span><br><span class="line"><span class="undefined">    return function()&#123;  </span></span><br><span class="line"><span class="undefined">        var clickedAt = +new Date;  </span></span><br><span class="line"><span class="undefined">         setTimeout(function()&#123;</span></span><br><span class="line"><span class="undefined">             !window.document.webkitHidden &amp;&amp; setTimeout(function()&#123; </span></span><br><span class="line"><span class="undefined">                   if (+new Date - clickedAt &lt; 2000)&#123;  </span></span><br><span class="line"><span class="undefined">                       window.location = 'https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com';  </span></span><br><span class="line"><span class="undefined">                   &#125;  </span></span><br><span class="line"><span class="undefined">             &#125;, 500);</span></span><br><span class="line"><span class="undefined">         &#125;, 500)   </span></span><br><span class="line"><span class="undefined">    &#125;;  </span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">applink();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>2.点击唤醒</p>
 <p>说明：通过h5可换醒app，如访问一个URL就能直接打开应用，如果该应用APP没有安装，那么直接跳转到App Store的APP下载页面。兼容性一般：在手机各大浏览器(360浏览器、uc浏览器、搜狗浏览器 QQ浏览器、百度浏览器 )能唤醒。微信、QQ客户端、新浪微博客户端、 腾讯微博客户端无法唤醒。</p>
 <p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!Doctype html&gt;&lt;html xmlns=http://www.w3.org/1999/xhtml&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=Content-Type content=&quot;text/html;charset=utf-8&quot;&gt;&lt;head&gt;</span><br><span class="line">&lt;script src=&quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;title&gt;直接唤醒demo&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;style&gt;#zjmobliestart&#123;font-size:40px;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--</span><br><span class="line">说明：通过h5可换醒app，如访问一个URL就能直接打开应用，如果该应用APP没有安装，那么直接跳转到App Store的APP下载页面</span><br><span class="line">兼容性一般：在手机各大浏览器(360浏览器 uc浏览器 搜狗浏览器 QQ浏览器 百度浏览器 )能唤醒。微信 QQ客户端 新浪微博客户端 腾讯微博客户端无法唤醒。</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;zjmobliestart&quot;&gt;唤醒浙江移动手机营业厅！&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt; function applink()&#123;   </span><br><span class="line">    window.location = &apos;zjmobile://platformapi/startapp&apos;;  </span><br><span class="line">        var clickedAt = +new Date;  </span><br><span class="line">         setTimeout(function()&#123;</span><br><span class="line">             !window.document.webkitHidden &amp;&amp; setTimeout(function()&#123; </span><br><span class="line">                   if (+new Date - clickedAt &lt; 2000)&#123;  </span><br><span class="line">                       window.location = &apos;https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com&apos;;  </span><br><span class="line">                   &#125;  </span><br><span class="line">             &#125;, 500);       </span><br><span class="line">         &#125;, 500)   </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">applink();&lt;/script&gt;   </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!Doctype html&gt;</span><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">http://www.w3.org/1999/xhtml</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">Content-Type</span> <span class="attr">content</span>=<span class="string">"text/html;charset=utf-8"</span>&gt;</span><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://libs.baidu.com/jquery/1.9.0/jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>直接唤醒demo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined">#zjmobliestart&#123;font-size:40px;&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">说明：通过h5可换醒app，如访问一个URL就能直接打开应用，如果该应用APP没有安装，那么直接跳转到App Store的APP下载页面</span></span><br><span class="line"><span class="comment">兼容性一般：在手机各大浏览器(360浏览器 uc浏览器 搜狗浏览器 QQ浏览器 百度浏览器 )能唤醒。微信 QQ客户端 新浪微博客户端 腾讯微博客户端无法唤醒。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"zjmobliestart"</span>&gt;</span>唤醒浙江移动手机营业厅！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"> function applink()&#123;   </span></span><br><span class="line"><span class="undefined">    window.location = 'zjmobile://platformapi/startapp';  </span></span><br><span class="line"><span class="undefined">        var clickedAt = +new Date;  </span></span><br><span class="line"><span class="undefined">         setTimeout(function()&#123;</span></span><br><span class="line"><span class="undefined">             !window.document.webkitHidden &amp;&amp; setTimeout(function()&#123; </span></span><br><span class="line"><span class="undefined">                   if (+new Date - clickedAt &lt; 2000)&#123;  </span></span><br><span class="line"><span class="undefined">                       window.location = 'https://itunes.apple.com/us/app/zhe-jiang-yi-dong-shou-ji/id898243566#weixin.qq.com';  </span></span><br><span class="line"><span class="undefined">                   &#125;  </span></span><br><span class="line"><span class="undefined">             &#125;, 500);       </span></span><br><span class="line"><span class="undefined">         &#125;, 500)   </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">document.getElementById("zjmobliestart").onclick = applink();</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这样就完成了我们的需求了。</p>
 <p>还要注意的是，如果是在微信中唤起本地app，手机的微信中，是利用微信内置的浏览器打开那个简单的HTML页面，注意：直接打开scheme://host/datastring是不可行的，微信不会把这串字符解析成网址，必须包装成网页才能借助微信的浏览器打开。进入后就是我们刚刚设计的页面。这个时候，直接点击“启动应用程序”是不会唤醒之前安装的APP的，因为微信做了屏蔽，你需要在右上角的菜单中选择“在浏览器中打开”。这个时候就可以唤醒你想唤醒的app了。</p>
 
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
-    
-    
-    <!--PC版-->
-
-    <!--PC版-->
-
-
-    
-    <!-- 评论 -->
-</main>
-            <!-- profile -->
-            
         </div>
-        <footer class="footer footer-unloaded">
-    <!-- social  -->
-    
-    <div class="social">
-        
-    
-        
-            
-                <a href="mailto:782918757@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="https://github.com/linfeizheng" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-    
-        
-            
-                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
-            
-        
-    
 
-    </div>
+        <blockquote class="post-copyright">
     
-    <!-- powered by Hexo  -->
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
-    </div>
-    <!-- 不蒜子  -->
-    
-    <div class="busuanzi-container">
-        <span id="busuanzi_container_site_pv">VISITOR VOLUME: <span id="busuanzi_value_site_pv"></span>
-        </span>
-    </div>
-    
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="toc-wrapper">
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-02-08T14:01:16.000Z" itemprop="dateUpdated">2018-02-08 22:01</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2018/02/05/通过H5唤起本地app/" target="_blank" rel="external">http://yoursite.com/2018/02/05/通过H5唤起本地app/</a>
         
     </div>
     
-    <div class="back-top">&#xe639;</div>
-    <div class="sidebar">
-    <div class="sidebar-header sidebar-header-show-archive">
-        <div class="sidebar-category">
-            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
-            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
-        </div>
-    </div>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-archive">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 1 </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span><a class="archive-post-title" href= "/2018/02/05/通过H5唤起本地app/" >通过H5唤起本地app</a>
-        </li>
-    
-    </div>
-  </div>
-        <div class="sidebar-tags">
-    <div class="sidebar-tags-name">
-    
-        <span class="sidebar-tag-name"><a href= "#">其他</a></span>
-    
-    </div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br/>
-    1、请确保node版本大于6.2<br/>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #787878; font-size: 0.6rem;">
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tag-list"></div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="郑林飞">
+            郑林飞
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其他/">其他</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/05/通过H5唤起本地app/&title=《通过H5唤起本地app》 — Hexo&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/05/通过H5唤起本地app/&title=《通过H5唤起本地app》 — Hexo&source=在安卓手机的浏览器中调起本地app" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/05/通过H5唤起本地app/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通过H5唤起本地app》 — Hexo&url=http://yoursite.com/2018/02/05/通过H5唤起本地app/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/05/通过H5唤起本地app/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
     </div>
-</div> 
-    <script>
-    var jsInfo = {
-        root: '/'
-    }
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/02/08/实现上滑屏幕，隐藏底部菜单栏/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">实现上滑屏幕，隐藏底部菜单栏</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>郑林飞 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/05/通过H5唤起本地app/&title=《通过H5唤起本地app》 — Hexo&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/05/通过H5唤起本地app/&title=《通过H5唤起本地app》 — Hexo&source=在安卓手机的浏览器中调起本地app" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/05/通过H5唤起本地app/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通过H5唤起本地app》 — Hexo&url=http://yoursite.com/2018/02/05/通过H5唤起本地app/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/05/通过H5唤起本地app/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/02/05/通过H5唤起本地app/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
 </script>
-    <!-- 不蒜子  -->
-    
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-    <!-- CNZZ统计  -->
-    
-    </div>
-    </body>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你快回来';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
 </html>
-
-

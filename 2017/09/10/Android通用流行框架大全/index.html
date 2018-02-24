@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>Android通用流行框架大全 | 郑林飞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="其他">
+    <meta name="description" content="1. 缓存   名称 描述     DiskLruCache Java实现基于LRU的磁盘缓存   Robospice     2.图片加载   名称 描述     Android Universal Image Loader 一个强大的加载，缓存，展示图片的库   Picasso 一个强大的图片下载与缓存的库   Fresco 一个用于管理图像和他们使用的内存的库   Glide 一个图片加载和">
+<meta name="keywords" content="其他">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android通用流行框架大全">
+<meta property="og:url" content="http://yoursite.com/2017/09/10/Android通用流行框架大全/index.html">
+<meta property="og:site_name" content="郑林飞">
+<meta property="og:description" content="1. 缓存   名称 描述     DiskLruCache Java实现基于LRU的磁盘缓存   Robospice     2.图片加载   名称 描述     Android Universal Image Loader 一个强大的加载，缓存，展示图片的库   Picasso 一个强大的图片下载与缓存的库   Fresco 一个用于管理图像和他们使用的内存的库   Glide 一个图片加载和">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-24T02:10:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android通用流行框架大全">
+<meta name="twitter:description" content="1. 缓存   名称 描述     DiskLruCache Java实现基于LRU的磁盘缓存   Robospice     2.图片加载   名称 描述     Android Universal Image Loader 一个强大的加载，缓存，展示图片的库   Picasso 一个强大的图片下载与缓存的库   Fresco 一个用于管理图像和他们使用的内存的库   Glide 一个图片加载和">
+    
+        <link rel="alternate" type="application/atom+xml" title="郑林飞" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">郑林飞</h5>
+          <a href="mailto:782918757@qq.com" title="782918757@qq.com" class="mail">782918757@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/linfeizheng" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Android通用流行框架大全</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Android通用流行框架大全</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-09-09T21:56:39.000Z" itemprop="datePublished" class="page-time">
+  2017-09-10
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-缓存"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 缓存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-图片加载"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.图片加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-图片处理"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 图片处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-网络请求"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 网络请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-网络解析"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 网络解析</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-数据库"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-依赖注入"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 依赖注入</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-图表"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. 图表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-后台处理"><span class="post-toc-number">9.</span> <span class="post-toc-text">9. 后台处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-事件总线"><span class="post-toc-number">10.</span> <span class="post-toc-text">10. 事件总线</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-响应式编程"><span class="post-toc-number">11.</span> <span class="post-toc-text">11. 响应式编程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-Log框架"><span class="post-toc-number">12.</span> <span class="post-toc-text">12. Log框架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13-测试框架"><span class="post-toc-number">13.</span> <span class="post-toc-text">13. 测试框架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#14-调试框架"><span class="post-toc-number">14.</span> <span class="post-toc-text">14. 调试框架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#15-性能优化"><span class="post-toc-number">15.</span> <span class="post-toc-text">15. 性能优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#16-数据统计"><span class="post-toc-number">16.</span> <span class="post-toc-text">16. 数据统计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#17-崩溃收集"><span class="post-toc-number">17.</span> <span class="post-toc-text">17. 崩溃收集</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#18-即时通讯"><span class="post-toc-number">18.</span> <span class="post-toc-text">18. 即时通讯</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#19-推送"><span class="post-toc-number">19.</span> <span class="post-toc-text">19. 推送</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#20-内嵌浏览器"><span class="post-toc-number">20.</span> <span class="post-toc-text">20. 内嵌浏览器</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Android通用流行框架大全"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Android通用流行框架大全</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-09-09 21:56" datetime="2017-09-09T21:56:39.000Z"  itemprop="datePublished">2017-09-09</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="1-缓存"><a href="#1-缓存" class="headerlink" title="1. 缓存"></a>1. 缓存</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DiskLruCache</td>
+<td>Java实现基于LRU的磁盘缓存</td>
+</tr>
+<tr>
+<td>Robospice</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-图片加载"><a href="#2-图片加载" class="headerlink" title="2.图片加载"></a>2.图片加载</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android Universal Image Loader</td>
+<td>一个强大的加载，缓存，展示图片的库</td>
+</tr>
+<tr>
+<td>Picasso</td>
+<td>一个强大的图片下载与缓存的库</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>一个用于管理图像和他们使用的内存的库</td>
+</tr>
+<tr>
+<td>Glide</td>
+<td>一个图片加载和缓存的库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-图片处理"><a href="#3-图片处理" class="headerlink" title="3. 图片处理"></a>3. 图片处理</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Picasso-transformations</td>
+<td>一个为Picasso提供多种图片变换的库</td>
+</tr>
+<tr>
+<td>Glide-transformations</td>
+<td>一个为Glide提供多种图片变换的库</td>
+</tr>
+<tr>
+<td>Android-gpuimage</td>
+<td>基于OpenGL的Android过滤器</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-网络请求"><a href="#4-网络请求" class="headerlink" title="4. 网络请求"></a>4. 网络请求</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android Async HTTP</td>
+<td>Android异步HTTP库</td>
+</tr>
+<tr>
+<td>AndroidAsync</td>
+<td>异步Socket，HTTP(客户端+服务器)，WebSocket，和socket.io库。基于NIO而不是线程。</td>
+</tr>
+<tr>
+<td>OkHttp</td>
+<td>一个Http与Http/2的客户端</td>
+</tr>
+<tr>
+<td>Retrofit</td>
+<td>类型安全的Http客户端</td>
+</tr>
+<tr>
+<td>Volley</td>
+<td>Google推出的Android异步网络请求框架和图片加载框架</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-网络解析"><a href="#5-网络解析" class="headerlink" title="5. 网络解析"></a>5. 网络解析</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gson</td>
+<td>一个Java序列化/反序列化库，可以将JSON和java对象互相转换</td>
+</tr>
+<tr>
+<td>Jackson</td>
+<td>Jackson可以轻松地将Java对象转换成json对象和xml文档，同样也可以将json、xml转换成Java对象</td>
+</tr>
+<tr>
+<td>Fastjson</td>
+<td>Java上一个快速的JSON解析器/生成器</td>
+</tr>
+<tr>
+<td>HtmlPaser</td>
+<td>一种用来解析单个独立html或嵌套html的方式</td>
+</tr>
+<tr>
+<td>Jsoup</td>
+<td>一个以最好的DOM，CSS和jQuery解析html的库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-数据库"><a href="#6-数据库" class="headerlink" title="6. 数据库"></a>6. 数据库</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OrmLite</td>
+<td>JDBC和Android的轻量级ORM java包</td>
+</tr>
+<tr>
+<td>Sugar</td>
+<td>用超级简单的方法处理Android数据库</td>
+</tr>
+<tr>
+<td>GreenDAO</td>
+<td>一种轻快地将对象映射到SQLite数据库的ORM解决方案</td>
+</tr>
+<tr>
+<td>ActiveAndroid</td>
+<td>以活动记录方式为Android SQLite提供持久化</td>
+</tr>
+<tr>
+<td>SQLBrite</td>
+<td>SQLiteOpenHelper 和ContentResolver的轻量级包装</td>
+</tr>
+<tr>
+<td>Realm</td>
+<td>移动数据库：一个SQLite和ORM的替换品</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-依赖注入"><a href="#7-依赖注入" class="headerlink" title="7. 依赖注入"></a>7. 依赖注入</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ButterKnife</td>
+<td>将Android视图和回调方法绑定到字段和方法上</td>
+</tr>
+<tr>
+<td>Dagger2</td>
+<td>一个Android和java快速依赖注射器。</td>
+</tr>
+<tr>
+<td>AndroidAnotations</td>
+<td>快速安卓开发。易于维护</td>
+</tr>
+<tr>
+<td>RoboGuice</td>
+<td>Android平台的Google Guice</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-图表"><a href="#8-图表" class="headerlink" title="8. 图表"></a>8. 图表</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WilliamChart</td>
+<td>创建图表的Android库</td>
+</tr>
+<tr>
+<td>HelloCharts</td>
+<td>兼容到API8的Android图表库</td>
+</tr>
+<tr>
+<td>MPAndroidChart</td>
+<td>一个强大的Android图表视图/图形库</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-后台处理"><a href="#9-后台处理" class="headerlink" title="9. 后台处理"></a>9. 后台处理</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tape</td>
+<td>一个轻快的，事务性的，基于文件的FIFO的库</td>
+</tr>
+<tr>
+<td>Android Priority Job Queue</td>
+<td>一个专门为Android轻松调度任务的工作队列</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-事件总线"><a href="#10-事件总线" class="headerlink" title="10. 事件总线"></a>10. 事件总线</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EventBus</td>
+<td>安卓优化的事件总线，简化了活动、片段、线程、服务等的通信</td>
+</tr>
+<tr>
+<td>Otto</td>
+<td>一个基于Guava的增强的事件总线</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-响应式编程"><a href="#11-响应式编程" class="headerlink" title="11. 响应式编程"></a>11. 响应式编程</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RxJava</td>
+<td>JVM上的响应式扩展</td>
+</tr>
+<tr>
+<td>RxJavaJoins</td>
+<td>为RxJava提供Joins操作</td>
+</tr>
+<tr>
+<td>RxAndroid</td>
+<td>Android上的响应式扩展，在RxJava基础上添加了Android线程调度</td>
+</tr>
+<tr>
+<td>RxBinding</td>
+<td>提供用RxJava绑定Android UI的API</td>
+</tr>
+<tr>
+<td>Agera</td>
+<td>Android上的响应式编程</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-Log框架"><a href="#12-Log框架" class="headerlink" title="12. Log框架"></a>12. Log框架</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logger</td>
+<td>简单，漂亮，强大的Android日志工具</td>
+</tr>
+<tr>
+<td>Hugo</td>
+<td>在调试版本上注解的触发方法进行日志记录</td>
+</tr>
+<tr>
+<td>Timber</td>
+<td>一个小的，可扩展的日志工具</td>
+</tr>
+<tr>
+<td>Xutils</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-测试框架"><a href="#13-测试框架" class="headerlink" title="13. 测试框架"></a>13. 测试框架</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mockito</td>
+<td>Java编写的Mocking单元测试框架</td>
+</tr>
+<tr>
+<td>Robotium</td>
+<td>Android UI 测试</td>
+</tr>
+<tr>
+<td>Robolectric</td>
+<td>Android单元测试框架</td>
+</tr>
+</tbody>
+</table>
+<p>Android自带很多测试工具：JUnit，Monkeyrunner，UiAutomator，Espresso等</p>
+<h3 id="14-调试框架"><a href="#14-调试框架" class="headerlink" title="14. 调试框架"></a>14. 调试框架</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stetho</td>
+<td>调试Android应用的桥梁，使得可以利用Chrome开发者工具进行调试</td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-性能优化"><a href="#15-性能优化" class="headerlink" title="15. 性能优化"></a>15. 性能优化</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LeakCanary</td>
+<td>内存泄漏检测工具</td>
+</tr>
+<tr>
+<td>ACRA</td>
+<td>Android应用程序崩溃报告</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-数据统计"><a href="#16-数据统计" class="headerlink" title="16. 数据统计"></a>16. 数据统计</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>友盟统计</td>
+<td></td>
+</tr>
+<tr>
+<td>百度统计</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="17-崩溃收集"><a href="#17-崩溃收集" class="headerlink" title="17. 崩溃收集"></a>17. 崩溃收集</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>腾讯bugly</td>
+<td></td>
+</tr>
+<tr>
+<td>bugtags</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="18-即时通讯"><a href="#18-即时通讯" class="headerlink" title="18. 即时通讯"></a>18. 即时通讯</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>环信</td>
+<td></td>
+</tr>
+<tr>
+<td>融云</td>
+<td></td>
+</tr>
+<tr>
+<td>阿里百川</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="19-推送"><a href="#19-推送" class="headerlink" title="19. 推送"></a>19. 推送</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小米推送</td>
+<td></td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>个推</p>
+<h3 id="20-内嵌浏览器"><a href="#20-内嵌浏览器" class="headerlink" title="20. 内嵌浏览器"></a>20. 内嵌浏览器</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>腾讯X5内核</td>
+<td></td>
+</tr>
+<tr>
+<td>百度T5内核</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        原始链接：<a href="/2017/09/10/Android通用流行框架大全/" target="_blank" rel="external">http://yoursite.com/2017/09/10/Android通用流行框架大全/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="郑林飞">
+            郑林飞
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其他/">其他</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/09/28/Service总结/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Service总结</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/21/http和https/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">http和https</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>郑林飞 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你快回来';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

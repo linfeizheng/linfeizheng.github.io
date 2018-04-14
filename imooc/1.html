@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	<title></title>
-</head>
-<body>
-Android系统内存分配与回收方式
-
-`一个app通常就是一个进程对应一个虚拟机
-`GC只在Heap剩余空间不够时才发出垃圾回收
-`GC触发时，所有的线程都会被暂停
-
-App内存限制机制
-｀每个app分配的最大内存限制，随不同设备而不同
-｀吃内存大户：图片
-｀为什么要限制？
-
-切换应用时后台app清理机制
-｀app切换时的LRU Cache
-	LRU算法：最近使用的排在最前面，最少可能的被清理掉
-｀onTrimMemory(int level)回调方法
-
-监控内存的几种方法演示
-｀AS代码演示
-Float totalMemory = Runtime.getRuntime().totalMemory() * 1.0f / (1024 * 1024);
-Float freeMemory = Runtime.getRuntime().freeMemory() * 1.0f / (1024 * 1024);
-Float maxMemory = Runtime.getRuntime().maxMemory() * 1.0f / (1024 * 1024);
-
-`Android Profiler
-</body>
-</html>>
+<hr>
+<p>title: APP性能优化之内存优化</p>
+<h2 id="date-2018-04-14-19-47-16"><a href="#date-2018-04-14-19-47-16" class="headerlink" title="date: 2018-04-14 19:47:16"></a>date: 2018-04-14 19:47:16</h2><h4 id="Android系统内存分配与回收方式"><a href="#Android系统内存分配与回收方式" class="headerlink" title="Android系统内存分配与回收方式"></a>Android系统内存分配与回收方式</h4><ul>
+<li>一个app通常就是一个进程对应一个虚拟机</li>
+<li>GC只在Heap剩余空间不够时才发出垃圾回收</li>
+<li>GC触发时，所有的线程都会被暂停</li>
+</ul>
+<h4 id="App内存限制机制"><a href="#App内存限制机制" class="headerlink" title="App内存限制机制"></a>App内存限制机制</h4><ul>
+<li>每个app分配的最大内存限制，随不同设备而不同</li>
+<li>吃内存大户：图片</li>
+<li>为什么要限制？</li>
+</ul>
+<h4 id="切换应用时后台app清理机制"><a href="#切换应用时后台app清理机制" class="headerlink" title="切换应用时后台app清理机制"></a>切换应用时后台app清理机制</h4><ul>
+<li>app切换时的LRU Cache<br>  LRU算法：最近使用的排在最前面，最少可能的被清理掉</li>
+<li>onTrimMemory(int level)回调方法</li>
+</ul>
+<h4 id="监控内存的几种方法演示"><a href="#监控内存的几种方法演示" class="headerlink" title="监控内存的几种方法演示"></a>监控内存的几种方法演示</h4><ol>
+<li>AS代码演示<pre><code class="Java">Float totalMemory = Runtime.getRuntime().totalMemory() * <span class="number">1.0f</span> / (<span class="number">1024</span> * <span class="number">1024</span>);
+Float freeMemory = Runtime.getRuntime().freeMemory() * <span class="number">1.0f</span> / (<span class="number">1024</span> * <span class="number">1024</span>);
+Float maxMemory = Runtime.getRuntime().maxMemory() * <span class="number">1.0f</span> / (<span class="number">1024</span> * <span class="number">1024</span>);
+</code></pre>
+</li>
+<li>Android Profiler</li>
+</ol>

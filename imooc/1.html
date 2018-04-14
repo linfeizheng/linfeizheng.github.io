@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title></title>
+</head>
+<body>
+Android系统内存分配与回收方式
+
+`一个app通常就是一个进程对应一个虚拟机
+`GC只在Heap剩余空间不够时才发出垃圾回收
+`GC触发时，所有的线程都会被暂停
+
+App内存限制机制
+｀每个app分配的最大内存限制，随不同设备而不同
+｀吃内存大户：图片
+｀为什么要限制？
+
+切换应用时后台app清理机制
+｀app切换时的LRU Cache
+	LRU算法：最近使用的排在最前面，最少可能的被清理掉
+｀onTrimMemory(int level)回调方法
+
+监控内存的几种方法演示
+｀AS代码演示
+Float totalMemory = Runtime.getRuntime().totalMemory() * 1.0f / (1024 * 1024);
+Float freeMemory = Runtime.getRuntime().freeMemory() * 1.0f / (1024 * 1024);
+Float maxMemory = Runtime.getRuntime().maxMemory() * 1.0f / (1024 * 1024);
+
+`Android Profiler
+</body>
+</html>>

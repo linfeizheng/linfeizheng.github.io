@@ -18,7 +18,7 @@ int largeMemClass = manager.getLargeMemoryClass();//开启android:largeHeap=&quo
 </ul>
 <h4 id="监控内存的几种方法演示"><a href="#监控内存的几种方法演示" class="headerlink" title="监控内存的几种方法演示"></a>监控内存的几种方法演示</h4><ol>
 <li>AS代码演示<pre><code>Float totalMemory = Runtime.getRuntime().totalMemory() * 1.0f / (1024 * 1024);
- Float freeMemory = Runtime.getRuntime().freeMemory() * 1.0f / (1024 * 1024);
+Float freeMemory = Runtime.getRuntime().freeMemory() * 1.0f / (1024 * 1024);
 Float maxMemory = Runtime.getRuntime().maxMemory() * 1.0f / (1024 * 1024);
 </code></pre></li>
 <li>Android Profiler</li>
@@ -40,4 +40,25 @@ Float maxMemory = Runtime.getRuntime().maxMemory() * 1.0f / (1024 * 1024);
 <li>尤其Activity泄漏</li>
 <li>用Application Context而不是Activity Context</li>
 <li>注意Cursor对象是否及时关闭</li>
+</ul>
+<h2 id="OOM问题优化"><a href="#OOM问题优化" class="headerlink" title="OOM问题优化"></a>OOM问题优化</h2><h4 id="OOM的必然性与可解决性"><a href="#OOM的必然性与可解决性" class="headerlink" title="OOM的必然性与可解决性"></a>OOM的必然性与可解决性</h4><h4 id="强引用、软引用的意义"><a href="#强引用、软引用的意义" class="headerlink" title="强引用、软引用的意义"></a>强引用、软引用的意义</h4><ul>
+<li>强引用与软引用</li>
+<li>强引用与软引用使用场景</li>
+</ul>
+<blockquote>
+<p>强引用：普通写法。</p>
+<p>软引用：如果内存空间足够，垃圾回收器就不会回收它，如果内存空间不足了，就会回收这些对象的内存。只要垃圾回收器没有回收它，该对象就可以被程序使用。软引用可用来实现内存敏感的高速缓存。</p>
+<p>弱引用：只具有弱引用的对象拥有更短暂的生命周期。在垃圾回收器线程扫描它 所管辖的内存区域的过程中，一旦发现了只具有弱引用的对象，不管当前内存空间足够与否，都会回收它的内存。不过，由于垃圾回收器是一个优先级很低的线程， 因此不一定会很快发现那些只具有弱引用的对象。 </p>
+</blockquote>
+<h4 id="优化OOM问题的方法"><a href="#优化OOM问题的方法" class="headerlink" title="优化OOM问题的方法"></a>优化OOM问题的方法</h4><ul>
+<li>注意临时Bitmap对象的及时回收<pre><code>BitmapFactory.Options options = new BitmapFactory.Options();
+options.inJustDecodeBounds = true;
+BitmapFactory.decodeResource(getResources(), R.drawable.yin, options);//不直接加载，获取bitmap图片宽高
+BitmapFactory.Options options2 = new BitmapFactory.Options();
+options2.inSampleSize = scale;
+Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.yin, options2);//scale越大，图片越模糊，所占内存越小
+</code></pre></li>
+<li>避免Bitmap的浪费</li>
+<li>Try catch某些大内存分配的操作</li>
+<li>加载Bitmap：缩放比例、解码格式、局部加载</li>
 </ul>

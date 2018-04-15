@@ -51,14 +51,15 @@ Float maxMemory = Runtime.getRuntime().maxMemory() * 1.0f / (1024 * 1024);
 <p>弱引用：只具有弱引用的对象拥有更短暂的生命周期。在垃圾回收器线程扫描它 所管辖的内存区域的过程中，一旦发现了只具有弱引用的对象，不管当前内存空间足够与否，都会回收它的内存。不过，由于垃圾回收器是一个优先级很低的线程， 因此不一定会很快发现那些只具有弱引用的对象。 </p>
 </blockquote>
 <h4 id="优化OOM问题的方法"><a href="#优化OOM问题的方法" class="headerlink" title="优化OOM问题的方法"></a>优化OOM问题的方法</h4><ul>
-<li>注意临时Bitmap对象的及时回收<pre><code>BitmapFactory.Options options = new BitmapFactory.Options();
+<li>注意临时Bitmap对象的及时回收</li>
+<li>避免Bitmap的浪费</li>
+<li>Try catch某些大内存分配的操作</li>
+<li>加载Bitmap：缩放比例、解码格式、局部加载<pre><code>BitmapFactory.Options options = new BitmapFactory.Options();
 options.inJustDecodeBounds = true;
 BitmapFactory.decodeResource(getResources(), R.drawable.yin, options);//不直接加载，获取bitmap图片宽高
 BitmapFactory.Options options2 = new BitmapFactory.Options();
 options2.inSampleSize = scale;
 Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(), R.drawable.yin, options2);//scale越大，图片越模糊，所占内存越小
 </code></pre></li>
-<li>避免Bitmap的浪费</li>
-<li>Try catch某些大内存分配的操作</li>
-<li>加载Bitmap：缩放比例、解码格式、局部加载</li>
 </ul>
+<p><a href="https://blog.csdn.net/Fight_Rain/article/details/70198565">别人的总结</a></p>

@@ -9,7 +9,11 @@ url: https://www.baidu.com
 ---
 ###### 3、 [慕课网笔记](http://zhenglinfei.cn/imooc/)
 ---
-###### 4、 [测试](/imooc/2.md) 
+###### 4、 [笔记](http://zhenglinfei.cn/notebook/)
+---
+###### 5、 [黑马程序员-打动面试官](http://zhenglinfei.cn/ddmsg)
+---
+###### 5、 [笔记](http://zhenglinfei.cn/notebook/)
 ---
 ###### 5、 {% post_link Android性能优化 %}
 ---

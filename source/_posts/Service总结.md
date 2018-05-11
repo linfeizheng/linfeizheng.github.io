@@ -33,6 +33,7 @@ bindService(intent,conn,BIND_AUTO_CREATE);
 1. startService启动之后，如果没有调用stopSelf()或者stopService()就会一直在后台运行。bindService启动Service之后，在启动它的组件被销毁后也会解绑并销毁。
 2. startService()启动Service到结束，Service经历生命周期的是onCreate()、onStartCommand()、onDestory()。而bindService()启动Service，Service经历的生命周期是onCreate()、onBind()、onUnbind()、onDestory()
 3. 如果即startService又bindService启动了Service，要分别unBindService()、stopSelf()/stopService()关闭Service。这里关闭没有顺序限制的，比如：先startService，后bindService。结束时先进行unBindService，stopService，还是顺序反过来都是没有问题的。
+![](1.jpg)
 
 #### 启动之后再次启动的生命周期
 

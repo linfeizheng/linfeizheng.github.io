@@ -7,7 +7,7 @@ url: https://www.baidu.com
 ---
 ###### 2、 [面试题](http://zhenglinfei.cn/ms/) 
 ---
-###### 3、 [慕课网笔记](http://zhenglinfei.cn/imooc/)
+###### 3、 [慕课网笔记](localhost:4000/imooc/)
 ---
 ###### 4、 [笔记](http://zhenglinfei.cn/notebook/)
 ---

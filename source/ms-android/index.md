@@ -76,6 +76,9 @@ onCreate() ---> onBind() ---> onunbind() ---> onDestory()
 **特点：**bind的方式开启服务，绑定服务，调用者挂了，服务也会跟着挂掉。
 绑定者可以调用服务里面的方法。
 
+#### Activity如与Service通信？
+可以通过bindService的方式，先在Activity里实现一个ServiceConnection接口，并将该接口传递给bindService()方法，在ServiceConnection接口的onServiceConnected()方法里执行相关操作。
+
 #### 两种注册、发送广播的方式?
 第一种：代码中动态注册
 ``` java
@@ -100,8 +103,8 @@ myContext.registerReceiver(smsBroadCastReceiver,intentFilter,
 </receiver>
 ```
 **两种注册广播的不同**
-第一种不是常驻型广播，也就是说广播跟随程序的生命周期。
-第二种是常驻型，也就是说当应用程序关闭后，如果有信息广播来，程序也会被系统调用自动运行。
+第一种不是常驻型广播，跟随程序的生命周期。
+第二种是常驻型，不受组件生命周期影响，即便应用退出，广播还是可以被接收，耗电、占内存。
 **有两种方式分别发送两种不同的广播：**
 通过mContext.sendBroadcast(Intent)或mContext.sendBroadcast(Intent, String)发送的是无序广播(后者加了权限)；
 通过mContext.sendOrderedBroadcast(Intent, String, BroadCastReceiver, Handler, int, String, Bundle)发送的是有序广播。

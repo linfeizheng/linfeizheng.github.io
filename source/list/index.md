@@ -6,7 +6,7 @@ url: https://www.baidu.com
 ###### 1、 [hexo](http://zhenglinfei.cn/hexo/) 
 
 ---
-###### 2、 [慕课网笔记](localhost:4000/imooc/)
+###### 2、 [慕课网笔记](http://zhenglinfei.cn/imooc/)
 ---
 ###### 3、 [笔记](http://zhenglinfei.cn/notebook/)
 ---
@@ -21,11 +21,28 @@ url: https://www.baidu.com
 面试题
 ---
 ---
-###### 1、 [安卓](localhost:4000/ms-android/) 
+###### 1、 [安卓](http://zhenglinfei.cn/ms-android/) 
 ---
-###### 2、 [Java](localhost:4000/ms-java/) 
+###### 2、 [Java](http://zhenglinfei.cn/ms-java/) 
 ---
-###### 3、 [算法](localhost:4000/ms-suanfa/) 
+###### 3、 [算法](http://zhenglinfei.cn/ms-suanfa/) 
 ---
-###### 4、 [http](localhost:4000/ms-http/) 
+###### 4、 [http](http://zhenglinfei.cn/ms-http/) 
+---
+
+
+RxJava
+---
+---
+###### 1、 [创建操作符](http://zhenglinfei.cn/rxjava1/)
+---
+###### 2、 [变换操作符](http://zhenglinfei.cn/rxjava2/)
+---
+###### 3、 [组合/合并操作符](http://zhenglinfei.cn/rxjava3/)
+---
+###### 4、 [功能性操作符](http://zhenglinfei.cn/rxjava4/)
+---
+###### 5、 [过滤操作符](http://zhenglinfei.cn/rxjava5/)
+---
+###### 6、 [条件 / 布尔操作符](http://zhenglinfei.cn/rxjava6/)
 ---

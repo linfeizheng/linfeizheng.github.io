@@ -1,10 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acaecc44-2c1a-4444-a763-a6f6ed6d1134" name="Default" comment="">
+    <list default="true" id="acaecc44-2c1a-4444-a763-a6f6ed6d1134" name="Default" comment="update">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/linfeizheng.github.io.iml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/hexo.iml" afterPath="$PROJECT_DIR$/.idea/hexo.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/themes/archer" afterPath="$PROJECT_DIR$/themes/archer" />
-      <change beforePath="$PROJECT_DIR$/themes/huno" afterPath="$PROJECT_DIR$/themes/huno" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scaffolds/draft.md" afterPath="$PROJECT_DIR$/scaffolds/draft.md" />
+      <change beforePath="$PROJECT_DIR$/scaffolds/page.md" afterPath="$PROJECT_DIR$/scaffolds/page.md" />
+      <change beforePath="$PROJECT_DIR$/scaffolds/post.md" afterPath="$PROJECT_DIR$/scaffolds/post.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Android中的各种Span.md" afterPath="$PROJECT_DIR$/source/_posts/Android中的各种Span.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Android性能优化.md" afterPath="$PROJECT_DIR$/source/_posts/Android性能优化.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Android消息机制-Handler.md" afterPath="$PROJECT_DIR$/source/_posts/Android消息机制-Handler.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Android混淆总结.md" afterPath="$PROJECT_DIR$/source/_posts/Android混淆总结.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Android运行时权限详解.md" afterPath="$PROJECT_DIR$/source/_posts/Android运行时权限详解.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Android通用流行框架大全.md" afterPath="$PROJECT_DIR$/source/_posts/Android通用流行框架大全.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/Service总结.md" afterPath="$PROJECT_DIR$/source/_posts/Service总结.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/V1、V2签名包和快速集成美团多渠道打包.md" afterPath="$PROJECT_DIR$/source/_posts/V1、V2签名包和快速集成美团多渠道打包.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/apk瘦身.md" afterPath="$PROJECT_DIR$/source/_posts/apk瘦身.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/http和https.md" afterPath="$PROJECT_DIR$/source/_posts/http和https.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/匿名类用到的变量为什么一定要是final的呢.md" afterPath="$PROJECT_DIR$/source/_posts/匿名类用到的变量为什么一定要是final的呢.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/实现上滑屏幕，隐藏底部菜单栏.md" afterPath="$PROJECT_DIR$/source/_posts/实现上滑屏幕，隐藏底部菜单栏.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/程序员英语口语等级考试.md" afterPath="$PROJECT_DIR$/source/_posts/程序员英语口语等级考试.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/给RecyclerView加上折叠的效果.md" afterPath="$PROJECT_DIR$/source/_posts/给RecyclerView加上折叠的效果.md" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/通过H5唤起本地app.md" afterPath="$PROJECT_DIR$/source/_posts/通过H5唤起本地app.md" />
+      <change beforePath="$PROJECT_DIR$/source/about/index.md" afterPath="$PROJECT_DIR$/source/about/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/categories/index.md" afterPath="$PROJECT_DIR$/source/categories/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/ddmsg/index.md" afterPath="$PROJECT_DIR$/source/ddmsg/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/hexo/index.md" afterPath="$PROJECT_DIR$/source/hexo/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/imooc/index.md" afterPath="$PROJECT_DIR$/source/imooc/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/list/index.md" afterPath="$PROJECT_DIR$/source/list/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/ms-android/index.md" afterPath="$PROJECT_DIR$/source/ms-android/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/ms-http/index.md" afterPath="$PROJECT_DIR$/source/ms-http/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/ms-java/index.md" afterPath="$PROJECT_DIR$/source/ms-java/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/ms-suanfa/index.md" afterPath="$PROJECT_DIR$/source/ms-suanfa/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/notebook/index.md" afterPath="$PROJECT_DIR$/source/notebook/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/rxjava1/index.md" afterPath="$PROJECT_DIR$/source/rxjava1/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/rxjava2/index.md" afterPath="$PROJECT_DIR$/source/rxjava2/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/rxjava3/index.md" afterPath="$PROJECT_DIR$/source/rxjava3/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/rxjava4/index.md" afterPath="$PROJECT_DIR$/source/rxjava4/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/rxjava5/index.md" afterPath="$PROJECT_DIR$/source/rxjava5/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/rxjava6/index.md" afterPath="$PROJECT_DIR$/source/rxjava6/index.md" />
+      <change beforePath="$PROJECT_DIR$/source/tags/index.md" afterPath="$PROJECT_DIR$/source/tags/index.md" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/.editorconfig" afterPath="$PROJECT_DIR$/themes/indigo/.editorconfig" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/.idea/indigo.iml" afterPath="$PROJECT_DIR$/themes/indigo/.idea/indigo.iml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/themes/indigo/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/.idea/misc.xml" afterPath="$PROJECT_DIR$/themes/indigo/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/.idea/modules.xml" afterPath="$PROJECT_DIR$/themes/indigo/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/themes/indigo/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/LICENSE" afterPath="$PROJECT_DIR$/themes/indigo/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/README.md" afterPath="$PROJECT_DIR$/themes/indigo/README.md" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/_config.yml" afterPath="$PROJECT_DIR$/themes/indigo/_config.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/languages/en.yml" afterPath="$PROJECT_DIR$/themes/indigo/languages/en.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/languages/ja.yml" afterPath="$PROJECT_DIR$/themes/indigo/languages/ja.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/languages/nl-NL" afterPath="$PROJECT_DIR$/themes/indigo/languages/nl-NL" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/languages/zh-CN.yml" afterPath="$PROJECT_DIR$/themes/indigo/languages/zh-CN.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/languages/zh-TW.yml" afterPath="$PROJECT_DIR$/themes/indigo/languages/zh-TW.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/after-footer.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/after-footer.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/archive.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/archive.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/footer.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/footer.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/head.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/head.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/header.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/header.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/index-item.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/index-item.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/loading.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/loading.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/menu.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/menu.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/paginator.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/paginator.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/baidu.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/baidu.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/disqus.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/disqus.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/dynamic-title.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/dynamic-title.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/gitment.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/gitment.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/google-analytics.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/google-analytics.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/mathjax.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/mathjax.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/page-visit.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/page-visit.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/site-visit.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/site-visit.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/tajs.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/tajs.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/uyan.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/uyan.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/valine.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/plugins/valine.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/category.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/category.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/comment.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/comment.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/copyright.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/copyright.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/date.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/date.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/head-meta.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/head-meta.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/nav.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/nav.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/reward-btn.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/reward-btn.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/reward.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/reward.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/share-fab.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/share-fab.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/share.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/share.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/tag.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/tag.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/title.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/title.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/toc.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/toc.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/updated.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/post/updated.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/script.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/script.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/search.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/search.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/_partial/tags-bar.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/_partial/tags-bar.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/archive.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/archive.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/categories.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/categories.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/category.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/category.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/index.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/index.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/layout.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/layout.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/page.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/page.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/post.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/post.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/tag.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/tag.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/layout/tags.ejs" afterPath="$PROJECT_DIR$/themes/indigo/layout/tags.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/scripts/plugins.js" afterPath="$PROJECT_DIR$/themes/indigo/scripts/plugins.js" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/archives.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/archives.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/article.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/article.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/fontawesome.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/fontawesome.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/gotop.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/gotop.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/header.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/header.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/highlight.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/highlight.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/layout.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/layout.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/lightbox.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/lightbox.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/loading.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/loading.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/page.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/page.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/postlist.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/postlist.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/reward.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/reward.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/roboto.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/roboto.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/search.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/search.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/share.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/share.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/tags.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/tags.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/variable.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/variable.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_partial/waves.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_partial/waves.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/_plugin/valine.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/_plugin/valine.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/FontAwesome.otf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/FontAwesome.otf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.eot" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.svg" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.ttf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.woff" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/fontawesome/fontawesome-webfont.woff2" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.eot" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.ttf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.woff" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Bold.woff2" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.eot" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.ttf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.woff" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Light.woff2" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.eot" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.ttf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.woff" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Medium.woff2" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.eot" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.ttf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.woff" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Regular.woff2" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.eot" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.ttf" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.woff" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/themes/indigo/source/css/fonts/roboto/Roboto-Thin.woff2" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/css/style.less" afterPath="$PROJECT_DIR$/themes/indigo/source/css/style.less" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/img/avatar.jpg" afterPath="$PROJECT_DIR$/themes/indigo/source/img/avatar.jpg" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/img/brand.jpg" afterPath="$PROJECT_DIR$/themes/indigo/source/img/brand.jpg" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/img/cc.png" afterPath="$PROJECT_DIR$/themes/indigo/source/img/cc.png" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/img/img-err.png" afterPath="$PROJECT_DIR$/themes/indigo/source/img/img-err.png" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/img/img-loading.png" afterPath="$PROJECT_DIR$/themes/indigo/source/img/img-loading.png" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/imooc/1.md" afterPath="$PROJECT_DIR$/themes/indigo/source/imooc/1.md" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/imooc/2.md" afterPath="$PROJECT_DIR$/themes/indigo/source/imooc/2.md" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/js/main.js" afterPath="$PROJECT_DIR$/themes/indigo/source/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/js/main.min.js" afterPath="$PROJECT_DIR$/themes/indigo/source/js/main.min.js" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/js/search.js" afterPath="$PROJECT_DIR$/themes/indigo/source/js/search.js" />
+      <change beforePath="$PROJECT_DIR$/themes/indigo/source/js/search.min.js" afterPath="$PROJECT_DIR$/themes/indigo/source/js/search.min.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/.gitignore" afterPath="$PROJECT_DIR$/themes/landscape/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/Gruntfile.js" afterPath="$PROJECT_DIR$/themes/landscape/Gruntfile.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/LICENSE" afterPath="$PROJECT_DIR$/themes/landscape/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/README.md" afterPath="$PROJECT_DIR$/themes/landscape/README.md" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/_config.yml" afterPath="$PROJECT_DIR$/themes/landscape/_config.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/de.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/de.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/default.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/default.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/es.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/es.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/fr.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/fr.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/ja.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/ja.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/ko.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/ko.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/nl.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/nl.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/no.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/no.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/pt.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/pt.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/ru.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/ru.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/zh-CN.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/zh-CN.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/languages/zh-TW.yml" afterPath="$PROJECT_DIR$/themes/landscape/languages/zh-TW.yml" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/after-footer.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/after-footer.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/archive-post.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/archive-post.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/archive.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/archive.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/article.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/article.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/footer.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/footer.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/gauges-analytics.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/gauges-analytics.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/google-analytics.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/google-analytics.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/head.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/head.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/header.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/header.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/mobile-nav.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/mobile-nav.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/category.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/category.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/date.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/date.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/gallery.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/gallery.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/nav.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/nav.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/tag.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/tag.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/title.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/post/title.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_partial/sidebar.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_partial/sidebar.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/archive.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_widget/archive.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/category.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_widget/category.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/recent_posts.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_widget/recent_posts.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/tag.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_widget/tag.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/_widget/tagcloud.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/_widget/tagcloud.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/layout/layout.ejs" afterPath="$PROJECT_DIR$/themes/landscape/layout/layout.ejs" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/scripts/fancybox.js" afterPath="$PROJECT_DIR$/themes/landscape/scripts/fancybox.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_extend.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_extend.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/archive.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/archive.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/article.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/article.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/comment.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/comment.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/footer.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/footer.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/header.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/header.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/highlight.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/highlight.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/mobile.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/mobile.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar-aside.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar-aside.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar-bottom.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar-bottom.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_partial/sidebar.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_util/grid.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_util/grid.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_util/mixin.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_util/mixin.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/_variables.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/_variables.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/themes/landscape/source/css/fonts/fontawesome-webfont.svg" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/css/style.styl" afterPath="$PROJECT_DIR$/themes/landscape/source/css/style.styl" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-buttons.css" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-buttons.css" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-buttons.js" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-buttons.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-media.js" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-media.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-thumbs.css" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-thumbs.css" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-thumbs.js" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/helpers/jquery.fancybox-thumbs.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.css" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.css" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.js" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.pack.js" afterPath="$PROJECT_DIR$/themes/landscape/source/fancybox/jquery.fancybox.pack.js" />
+      <change beforePath="$PROJECT_DIR$/themes/landscape/source/js/script.js" afterPath="$PROJECT_DIR$/themes/landscape/source/js/script.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,6 +244,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/comic/index.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,7 +277,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="75" />
+    <option name="y" value="183" />
     <option name="width" value="1280" />
     <option name="height" value="726" />
   </component>
@@ -51,6 +298,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -60,11 +308,21 @@
               <item name="linfeizheng.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="linfeizheng.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="linfeizheng.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="linfeizheng.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="linfeizheng.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="linfeizheng.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="comic" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,43 +444,66 @@
       <option name="presentableId" value="Default" />
       <updated>1519437587585</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1528198603466</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528198603466</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="726" extended-state="0" />
+    <frame x="75" y="183" width="1280" height="726" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JSON Viewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/comic/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>V1、V2签名包和快速集成美团多渠道打包 | 郑林飞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="打包">
+    <meta name="description" content="本文主要介绍Android V1、V2签名包的基本概念和使用场景以及如何快速掌握美团多渠道打包。  美团多渠道打包的快速使用和集成 Android Studio 2.3版本及以上，V1、V2版本签名包的相关说明 V1、V2版本签名包的比较以及在本文提供的多渠道打包方案下，两种签名包的选择  开始 首先下载美团打包工具，下载完毕以后，解压出来会有2个包，一个是Python的安装环境，一个是美团打包的">
+<meta name="keywords" content="打包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="V1、V2签名包和快速集成美团多渠道打包">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/index.html">
+<meta property="og:site_name" content="郑林飞">
+<meta property="og:description" content="本文主要介绍Android V1、V2签名包的基本概念和使用场景以及如何快速掌握美团多渠道打包。  美团多渠道打包的快速使用和集成 Android Studio 2.3版本及以上，V1、V2版本签名包的相关说明 V1、V2版本签名包的比较以及在本文提供的多渠道打包方案下，两种签名包的选择  开始 首先下载美团打包工具，下载完毕以后，解压出来会有2个包，一个是Python的安装环境，一个是美团打包的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/2.webp">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/3.webp">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/4.webp">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/5.webp">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/6.webp">
+<meta property="og:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/7.webp">
+<meta property="og:updated_time" content="2018-06-05T10:07:45.954Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="V1、V2签名包和快速集成美团多渠道打包">
+<meta name="twitter:description" content="本文主要介绍Android V1、V2签名包的基本概念和使用场景以及如何快速掌握美团多渠道打包。  美团多渠道打包的快速使用和集成 Android Studio 2.3版本及以上，V1、V2版本签名包的相关说明 V1、V2版本签名包的比较以及在本文提供的多渠道打包方案下，两种签名包的选择  开始 首先下载美团打包工具，下载完毕以后，解压出来会有2个包，一个是Python的安装环境，一个是美团打包的">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/1.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="郑林飞" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">郑林飞</h5>
+          <a href="mailto:782918757@qq.com" title="782918757@qq.com" class="mail">782918757@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/linfeizheng" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">V1、V2签名包和快速集成美团多渠道打包</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">V1、V2签名包和快速集成美团多渠道打包</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-18T12:00:10.000Z" itemprop="datePublished" class="page-time">
+  2018-05-18
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="android-V1、V2签名包和快速集成美团多渠道打包"
+  class="post-article article-type-android fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">V1、V2签名包和快速集成美团多渠道打包</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-18 12:00" datetime="2018-05-18T12:00:10.000Z"  itemprop="datePublished">2018-05-18</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>本文主要介绍Android V1、V2签名包的基本概念和使用场景以及如何快速掌握美团多渠道打包。</p>
+<ol>
+<li>美团多渠道打包的快速使用和集成</li>
+<li>Android Studio 2.3版本及以上，V1、V2版本签名包的相关说明</li>
+<li>V1、V2版本签名包的比较以及在本文提供的多渠道打包方案下，两种签名包的选择</li>
+</ol>
+<p>开始</p>
+<p>首先下载美团打包工具，下载完毕以后，解压出来会有2个包，一个是Python的安装环境，一个是美团打包的工具。其中，美团的打包工具是一个压缩包，解压之后，有如下文件。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="1.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>下载无误之后，即可开始快速集成美团多渠道集成步骤：</p>
+<p>步骤1：配置Python环境</p>
+<p>这里就不讲解了，到python官网上下载最新的python安装包然后安装就行了</p>
+<p>步骤2：</p>
+<p>集成好Python的环境配置以后，打开下载好的美团打包工具。也就是本文第一张图，首先，有一个JavaUtil，这个是获取渠道信息的代码（可以自己Copy到项目，根据项目需求去集成使用）；还有一个PythonTool文件夹，这个就是美团打包的核心，点进这个文件夹之后，如图：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="2.webp" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>我们只需要把生成好的正式签名包，copy在这里。（这里只是演示，也就是app-release.apk这个文件）我们只需要把写好的正式签名包，copy在这里。注意：必须是同级目录。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="3.webp" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>然后，点击MultiChannelBuildTool这个python文件，点击一下即可！<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="4.webp" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>点击之后，会生成一个紫色框的文件夹，我们点进去该文件夹<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="5.webp" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>一瞬间生成了这么多个apk,耗时半秒不到。</p>
+<p>基本的多渠道打包使用就已经完成了。</p>
+<p>十分钟不到吧应该。是的，已经打包完毕了。</p>
+<p>问题1：如何配置其他的渠道？</p>
+<p>info文件夹，目录下的channel就是用来存放打包渠道的，注意：多个渠道之间请用换行隔开、多个渠道之间请用换行隔开（不建议使用Windows下面的txt直接打开，强烈建议使用notepad++等第三方文字编辑工具使用编辑！！！）</p>
+<p>问题2：如何获取渠道信息？</p>
+<p>在前面说到了，给大家准备的下载链接里面，解压缩后有个JavaUtil的包，这里面就是获取渠道信息的代码，开发者可以根据这个工具类，去获取渠道号。或者根据开发需要自己集成使用即可。</p>
+<p>关于V1、V2签名包的说明：</p>
+<p>说完了美团多渠道打包，我们在说说V1、V2签名包。</p>
+<p>如果我们升级到最新的AS（笔者的是3.0），点击打包选项，细心的你会看到这样的打包界面：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="6.webp" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>老版本的AS，只有V1选择，也就是紫色的框框。但是新版本的AS，默认勾选的是V2版本（笔者的AS默认是勾选的V2版本）。如果只勾选V2版本，打出来的签名包，很多机型会直接提示安装失败。解决办法下面会说。</p>
+<p>概述：</p>
+<p>在Android 7.0中引入了APK Signature Scheme v2，v1是jar Signature来自JDK。</p>
+<p>V1：应该是通过ZIP条目进行验证，这样APK 签署后可进行许多修改，这样可以移动甚至重新压缩文件。</p>
+<p>V2：验证压缩文件的所有字节，而不是单个 ZIP 条目，因此，在签名后无法再更改(包括 zipalign)。正因如此，现在在编译过程中，我们将压缩、调整和签署合并成一步完成。好处显而易见，更安全而且新的签名可缩短在设备上进行验证的时间（不需要费时地解压缩然后验证），从而加快应用安装速度。</p>
+<p>刚才说了，如果只勾选V2版本，打出来的签名包，很多机型会直接提示安装失败。下面就给大家提供两种解决方案</p>
+<p>解决方案一：</p>
+<p>V1和V2的签名使用：</p>
+<p>1）只勾选V1签名并不会影响什么，但是在7.0上不会使用更安全的验证方式</p>
+<p>2）只勾选V2签名7.0以下会直接安装完显示未安装，7.0以上则使用了V2的方式验证</p>
+<p>3）同时勾选V1和V2则所有机型都没问题。</p>
+<p>解决办法二：</p>
+<p>还有一种快速高效的代码解决方式，我们可以直接在app的build.gradle的android标签下，加入以下代码也可以解决只勾选V2版本签名包部分机型会提示安装失败的问题。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="7.webp" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>V2签名包是从Android7.0系统出现的新的签名机制，这个新机制使得apk的签名方式更加安全。首先我们应该尝试把V1和V2两个选项全部勾选，并尽可能的去使用他们，但是如果全部勾选完毕出现了问题，那么我们可以忽略这种新的签名机制，只勾选第一个选项(V1)，依旧使用我们之前老的签名机制，也就是说，V1版本更加快速方便。</p>
+<p>为什么这里会提到V1、V2的区别。因为这里的美团多渠道打包只能适用于V1版本的签名包，MMP</p>
+<p>所以，个人还是推荐使用V1打包方式。因为稳定，所以放心。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        原始链接：<a href="/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/" target="_blank" rel="external">http://yoursite.com/2018/05/18/V1、V2签名包和快速集成美团多渠道打包/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="郑林飞">
+            郑林飞
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打包/">打包</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/02/apk瘦身/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">apk瘦身</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>郑林飞 &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你快回来';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

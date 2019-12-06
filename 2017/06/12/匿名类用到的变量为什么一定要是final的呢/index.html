@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>匿名类用到的变量为什么一定要是final的呢? | 郑林飞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Java">
+    <meta name="description" content="提起final变量，大家通常知道这些： final成员变量表示常量，只能被赋值一次，赋值后值不再改变。 final类不能被继承，没有子类，final类中的方法默认是final的。 final方法不能被子类的方法覆盖，但可以被继承。 final不能用于修饰构造方法 final 常与 static一起用，作为常量来使用。 提问：在一些方法的参数中定义为final是干嘛的? 答: 不希望这个变量在方法里">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="匿名类用到的变量为什么一定要是final的呢?">
+<meta property="og:url" content="http://yoursite.com/2017/06/12/匿名类用到的变量为什么一定要是final的呢/index.html">
+<meta property="og:site_name" content="郑林飞">
+<meta property="og:description" content="提起final变量，大家通常知道这些： final成员变量表示常量，只能被赋值一次，赋值后值不再改变。 final类不能被继承，没有子类，final类中的方法默认是final的。 final方法不能被子类的方法覆盖，但可以被继承。 final不能用于修饰构造方法 final 常与 static一起用，作为常量来使用。 提问：在一些方法的参数中定义为final是干嘛的? 答: 不希望这个变量在方法里">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-05T10:07:45.971Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="匿名类用到的变量为什么一定要是final的呢?">
+<meta name="twitter:description" content="提起final变量，大家通常知道这些： final成员变量表示常量，只能被赋值一次，赋值后值不再改变。 final类不能被继承，没有子类，final类中的方法默认是final的。 final方法不能被子类的方法覆盖，但可以被继承。 final不能用于修饰构造方法 final 常与 static一起用，作为常量来使用。 提问：在一些方法的参数中定义为final是干嘛的? 答: 不希望这个变量在方法里">
+    
+        <link rel="alternate" type="application/atom+xml" title="郑林飞" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">郑林飞</h5>
+          <a href="mailto:782918757@qq.com" title="782918757@qq.com" class="mail">782918757@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/linfeizheng" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">匿名类用到的变量为什么一定要是final的呢?</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">匿名类用到的变量为什么一定要是final的呢?</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-11T19:47:16.000Z" itemprop="datePublished" class="page-time">
+  2017-06-11
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么使用匿名内部类的时候参数一定要加上final"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么使用匿名内部类的时候参数一定要加上final</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-匿名类用到的变量为什么一定要是final的呢"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">匿名类用到的变量为什么一定要是final的呢?</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-11 19:47" datetime="2017-06-11T19:47:16.000Z"  itemprop="datePublished">2017-06-11</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>提起final变量，大家通常知道这些：</p>
+<p>final成员变量表示常量，只能被赋值一次，赋值后值不再改变。</p>
+<p>final类不能被继承，没有子类，final类中的方法默认是final的。</p>
+<p>final方法不能被子类的方法覆盖，但可以被继承。</p>
+<p>final不能用于修饰构造方法</p>
+<p>final 常与 static一起用，作为常量来使用。</p>
+<p><strong>提问：在一些方法的参数中定义为final是干嘛的?</strong></p>
+<p><strong>答: 不希望这个变量在方法里面被修改，防止无意的修改而影响到调用方法外的变量。</strong></p>
+<p>不知道这个答案是从哪个语言带过来的， 感觉把final当成const了。</p>
+<p>假设出现以下方法定义:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fuc</span><span class="params">(<span class="keyword">final</span> String string)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fuc1</span><span class="params">(String string)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>对于这种写法，String本身就是一个不可以变的对象，并且其是作为基本参数类型，传参进入后，方法里面改变了String的值外面也不会改变，因此这两种写法实际结果是一样.只不过加了final，在string被赋值时IDE会直接报红。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fuc</span><span class="params">(<span class="keyword">final</span> A a)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fuc</span><span class="params">(A a)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>对于这种写法， A是一个对象，这样写不是代表A里面内容不能被改变，而是a不能被赋值为新对象了.</p>
+<h3 id="为什么使用匿名内部类的时候参数一定要加上final"><a href="#为什么使用匿名内部类的时候参数一定要加上final" class="headerlink" title="为什么使用匿名内部类的时候参数一定要加上final"></a>为什么使用匿名内部类的时候参数一定要加上final</h3><p>让我们写一个类看一下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">        String name;</span><br><span class="line">        <span class="keyword">int</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">final</span> Person a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">super</span>.run();</span><br><span class="line">                a.name = <span class="string">"hello"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>javac一下该文件，生成了3个class文件，我们看其中的两个</p>
+<p>内部类Person的class<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>$<span class="title">Person</span> </span>&#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    Test$Person(Test var1) &#123;</span><br><span class="line">        <span class="keyword">this</span>.<span class="keyword">this</span>$<span class="number">0</span> = var1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>匿名内部类Thread的class<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>$1 <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    Test$<span class="number">1</span>(Test var1， Person var2) &#123;</span><br><span class="line">        <span class="keyword">this</span>.<span class="keyword">this</span>$<span class="number">0</span> = var1;</span><br><span class="line">        <span class="keyword">this</span>.val$a = var2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.run();</span><br><span class="line">        <span class="keyword">this</span>.val$a.name = <span class="string">"hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>从这个匿名内部类的class文件我们可以看出两点</p>
+<ol>
+<li>其构造参数中增加了一个调用类.即我们所说的持有外部类的引用.</li>
+<li>我们定义的final参数被当做构造方法传了进来.至于为什么要把这个参数当做构造函数参数传进来，因为调用它的方法参数是存在栈里面的，其生命周期随着这个方法的调用结束而结束.而我们的异步任务可不是，有可能会执行很长时间。</li>
+</ol>
+<p>那么final的关键字作用就凸显了，Person参数要拷贝到内部类中，而拷贝会带来不一致性，  func中是一个异步的操作，负责改变a的name的值. 假设Person a 不是final的.那么a可以被任意指向新的对象，那么传给这个异步任务的对象还是老对象，这就造成了不一致.因此Java需要强制约束对象的一致性.因此必须是final的。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        原始链接：<a href="/2017/06/12/匿名类用到的变量为什么一定要是final的呢/" target="_blank" rel="external">http://yoursite.com/2017/06/12/匿名类用到的变量为什么一定要是final的呢/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="郑林飞">
+            郑林飞
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/07/13/Android消息机制-Handler/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Android消息机制(Handler)</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/05/09/通过H5唤起本地app/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">通过H5唤起本地app</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>郑林飞 &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你快回来';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

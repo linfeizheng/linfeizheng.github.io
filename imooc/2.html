@@ -1,0 +1,86 @@
+<h1 id="Android互动直播APP开发入门"><a href="#Android互动直播APP开发入门" class="headerlink" title="Android互动直播APP开发入门"></a>Android互动直播APP开发入门</h1><p><a href="https://www.imooc.com/learn/923">慕课链接</a></p>
+<h2 id="直播涉及的技术"><a href="#直播涉及的技术" class="headerlink" title="直播涉及的技术"></a>直播涉及的技术</h2><h4 id="直播的基本流程"><a href="#直播的基本流程" class="headerlink" title="直播的基本流程"></a>直播的基本流程</h4><table>
+<thead>
+<tr>
+<th>推流端</th>
+<th>服务端</th>
+<th>播放段</th>
+<th>互动系统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>采集</td>
+<td>转码</td>
+<td>拉流</td>
+<td>聊天</td>
+</tr>
+<tr>
+<td>前处理</td>
+<td>录制</td>
+<td>解码</td>
+<td>礼物</td>
+</tr>
+<tr>
+<td>编码</td>
+<td>截图</td>
+<td>渲染</td>
+<td>点赞</td>
+</tr>
+<tr>
+<td>推流</td>
+<td>鉴黄</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="直播流程之采集（一）"><a href="#直播流程之采集（一）" class="headerlink" title="直播流程之采集（一）"></a>直播流程之采集（一）</h2><h4 id="音频采集"><a href="#音频采集" class="headerlink" title="音频采集"></a>音频采集</h4><ul>
+<li>采样率</li>
+<li>位宽</li>
+<li>声道数</li>
+<li>音频帧</li>
+</ul>
+<p>采样率是8kHz，双通道，位宽为16bit，20ms为一帧，一帧的数据大小就是：8000<em>2</em>16*0.02 ＝ 5120bit ＝ 640byte</p>
+<h4 id="图像采集"><a href="#图像采集" class="headerlink" title="图像采集"></a>图像采集</h4><ul>
+<li>分辨率</li>
+<li>采样频率</li>
+<li>采集格式</li>
+<li>传输通道</li>
+</ul>
+<h4 id="采集源"><a href="#采集源" class="headerlink" title="采集源"></a>采集源</h4><ul>
+<li>摄像头</li>
+<li>屏幕录制</li>
+<li>文件推流</li>
+</ul>
+<h2 id="直播流程之采集（二）"><a href="#直播流程之采集（二）" class="headerlink" title="直播流程之采集（二）"></a>直播流程之采集（二）</h2><table>
+<thead>
+<tr>
+<th>推流端</th>
+<th>服务端</th>
+<th>播放段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android采集</td>
+<td>iOS采集</td>
+<td>PC采集</td>
+</tr>
+<tr>
+<td>setPreviewCallback</td>
+<td>AVFoundation.framework</td>
+<td>mjpeg-streamer</td>
+</tr>
+<tr>
+<td>MediaRecorder</td>
+<td></td>
+<td>摄像头</td>
+</tr>
+<tr>
+<td>机型适配</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>

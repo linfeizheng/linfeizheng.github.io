@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>实现上滑屏幕，隐藏底部菜单栏 | 郑林飞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="控件">
+    <meta name="description" content="实现列表上滑的同时，隐藏底部菜单栏，下滑的同时，显示底部菜单栏。">
+<meta name="keywords" content="控件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现上滑屏幕，隐藏底部菜单栏">
+<meta property="og:url" content="http://yoursite.com/2017/03/26/实现上滑屏幕，隐藏底部菜单栏/index.html">
+<meta property="og:site_name" content="郑林飞">
+<meta property="og:description" content="实现列表上滑的同时，隐藏底部菜单栏，下滑的同时，显示底部菜单栏。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1432108-401de738bac93f86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/228">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1432108-fb2706ee8245bef1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/228">
+<meta property="og:updated_time" content="2018-06-05T10:07:45.972Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实现上滑屏幕，隐藏底部菜单栏">
+<meta name="twitter:description" content="实现列表上滑的同时，隐藏底部菜单栏，下滑的同时，显示底部菜单栏。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1432108-401de738bac93f86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/228">
+    
+        <link rel="alternate" type="application/atom+xml" title="郑林飞" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">郑林飞</h5>
+          <a href="mailto:782918757@qq.com" title="782918757@qq.com" class="mail">782918757@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/linfeizheng" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">实现上滑屏幕，隐藏底部菜单栏</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">实现上滑屏幕，隐藏底部菜单栏</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-25T22:02:50.000Z" itemprop="datePublished" class="page-time">
+  2017-03-25
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局代码"><span class="post-toc-number">1.</span> <span class="post-toc-text">布局代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#java实现类"><span class="post-toc-number">2.</span> <span class="post-toc-text">java实现类</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-实现上滑屏幕，隐藏底部菜单栏"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">实现上滑屏幕，隐藏底部菜单栏</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-03-25 22:02" datetime="2017-03-25T22:02:50.000Z"  itemprop="datePublished">2017-03-25</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>实现列表上滑的同时，隐藏底部菜单栏，下滑的同时，显示底部菜单栏。<br><a id="more"></a><br>本文主要实现的功能是底部菜单栏随用户手势滑动而变化。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/1432108-401de738bac93f86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/228" alt="image" title="正常状态">
+                </div>
+                <div class="image-caption">正常状态</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/1432108-fb2706ee8245bef1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/228" alt="image" title="上滑之后">
+                </div>
+                <div class="image-caption">上滑之后</div>
+            </figure>
+<h3 id="布局代码"><a href="#布局代码" class="headerlink" title="布局代码"></a>布局代码</h3><p>这个功能实现起来比较简单，主要利用了CoordinatorLayout的layout_behavior的属性。具体代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">android.support.design.widget.CoordinatorLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">include</span> <span class="attr">layout</span>=<span class="string">"@layout/toolbar"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">include</span> <span class="attr">layout</span>=<span class="string">"@layout/container"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">android.support.design.widget.BottomNavigationView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:id</span>=<span class="string">"@+id/bottom_navigation"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">style</span>=<span class="string">"@style/Widget.Design.BottomNavigationView"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_alignParentBottom</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_gravity</span>=<span class="string">"bottom"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:background</span>=<span class="string">"@color/viewBackground"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:elevation</span>=<span class="string">"16dp"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:itemIconTint</span>=<span class="string">"@drawable/nav_item_color_state"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:itemTextColor</span>=<span class="string">"@drawable/nav_item_color_state"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:layout_behavior</span>=<span class="string">"com.testapp.widget.behavior.BottomNavigationBehavior"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">app:menu</span>=<span class="string">"@menu/bottom_navigation_main"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上面是activity_main的布局代码，第一个是菜单栏，第二个是内容界面，第三个是bottom。bottom导航栏这里采用是BottomNavigationView，具体用法不再介绍。<br>这里主要看一下BottomNavigationView的app:layout_behavior属性，该属性是协调布局特有的。网上的一版用法是</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app:layout_behavior="@string/appbar_scrolling_view_behavior"</span><br></pre></td></tr></table></figure>
+<p>虽然表面上看是一个字符串，其实在里面调用的也是一个view类。这次我们通过自定义这个behavior类，实现底部菜单栏的显隐性。</p>
+<h3 id="java实现类"><a href="#java实现类" class="headerlink" title="java实现类"></a>java实现类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BottomNavigationBehavior</span> <span class="keyword">extends</span> <span class="title">CoordinatorLayout</span>.<span class="title">Behavior</span>&lt;<span class="title">View</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> ObjectAnimator outAnimator, inAnimator;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BottomNavigationBehavior</span><span class="params">(Context context, AttributeSet attrs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context, attrs);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 垂直滑动</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">onStartNestedScroll</span><span class="params">(CoordinatorLayout coordinatorLayout, View child, View directTargetChild, View target, <span class="keyword">int</span> nestedScrollAxes)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> nestedScrollAxes == ViewCompat.SCROLL_AXIS_VERTICAL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNestedPreScroll</span><span class="params">(CoordinatorLayout coordinatorLayout, View child, View target, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy, <span class="keyword">int</span>[] consumed)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (dy &gt; <span class="number">0</span>) &#123;<span class="comment">// 上滑隐藏</span></span><br><span class="line">            <span class="keyword">if</span> (outAnimator == <span class="keyword">null</span>) &#123;</span><br><span class="line">                outAnimator = ObjectAnimator.ofFloat(child, <span class="string">"translationY"</span>, <span class="number">0</span>, child.getHeight());</span><br><span class="line">                outAnimator.setDuration(<span class="number">200</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!outAnimator.isRunning() &amp;&amp; child.getTranslationY() &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">                outAnimator.start();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (dy &lt; <span class="number">0</span>) &#123;<span class="comment">// 下滑显示</span></span><br><span class="line">            <span class="keyword">if</span> (inAnimator == <span class="keyword">null</span>) &#123;</span><br><span class="line">                inAnimator = ObjectAnimator.ofFloat(child, <span class="string">"translationY"</span>, child.getHeight(), <span class="number">0</span>);</span><br><span class="line">                inAnimator.setDuration(<span class="number">200</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!inAnimator.isRunning() &amp;&amp; child.getTranslationY() &gt;= child.getHeight()) &#123;</span><br><span class="line">                inAnimator.start();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个类的就是刚刚那个app:layout_behavior=”com.meiji.toutiao.widget.behavior.BottomNavigationBehavior”属性标明的类，看起来很简单，继承了Behavior抽象类，然后实现了两个方法。</p>
+<p><strong>onStartNestedScroll</strong>：这个方法主要用于监听协调布局的子view的滚动事件，当此方法返回true，表示要消耗此动作，继而执行下面的onNestedPreScroll方法，我们在代码中返回的是，滚动轴是不是竖直滚动轴。如果是的话，就返回true<br><strong>onNestedPreScroll</strong>：这个方法就比较简单了，当用户上滑的时候，隐藏底部菜单栏，这里使用了动画退出，使用了ObjectAnimator.ofFloat方法，第一个是view对象，指的就是bottom，第二个是Y轴的变化，第三个是Y轴变化的多少，接下来设置动画秒数。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+
+        
+        原始链接：<a href="/2017/03/26/实现上滑屏幕，隐藏底部菜单栏/" target="_blank" rel="external">http://yoursite.com/2017/03/26/实现上滑屏幕，隐藏底部菜单栏/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="郑林飞">
+            郑林飞
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/控件/">控件</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/04/17/Android中的各种Span/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Android中的各种Span</h4>
+      </a>
+    </div>
+  
+
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>郑林飞 &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你快回来';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

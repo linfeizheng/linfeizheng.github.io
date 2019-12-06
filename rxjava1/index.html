@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>最基础的操作符详解 - 创建操作符 | 郑林飞</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="基本创建create( ) 作用完整创建1个被观察者对象（Observable）  RxJava 中创建被观察者对象最基本的操作符  12345678910111213141516171">
+<meta property="og:type" content="website">
+<meta property="og:title" content="最基础的操作符详解 - 创建操作符">
+<meta property="og:url" content="http://yoursite.com/rxjava1/index.html">
+<meta property="og:site_name" content="郑林飞">
+<meta property="og:description" content="基本创建create( ) 作用完整创建1个被观察者对象（Observable）  RxJava 中创建被观察者对象最基本的操作符  12345678910111213141516171">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/1.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/2.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/3.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/4.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/5.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/6.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/10.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/7.gif">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/9.png">
+<meta property="og:image" content="http://yoursite.com/rxjava1/index/9.png">
+<meta property="og:updated_time" content="2018-06-05T10:07:45.995Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="最基础的操作符详解 - 创建操作符">
+<meta name="twitter:description" content="基本创建create( ) 作用完整创建1个被观察者对象（Observable）  RxJava 中创建被观察者对象最基本的操作符  12345678910111213141516171">
+<meta name="twitter:image" content="http://yoursite.com/rxjava1/index/1.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="郑林飞" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">郑林飞</h5>
+          <a href="mailto:782918757@qq.com" title="782918757@qq.com" class="mail">782918757@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/linfeizheng" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">最基础的操作符详解 - 创建操作符</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header page-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">最基础的操作符详解 - 创建操作符</h1>
+        <h5 class="subtitle">
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    <article class="page-article fade" itemprop="blogPage">
+        <div class="post-content page-content" id="page-content" itemprop="pageContent">
+            <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="基本创建"><a href="#基本创建" class="headerlink" title="基本创建"></a>基本创建</h3><p><strong>create( )</strong></p>
+<p>作用<br>完整创建1个被观察者对象（Observable）</p>
+<blockquote>
+<p>RxJava 中创建被观察者对象最基本的操作符</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 通过creat（）创建被观察者对象</span></span><br><span class="line">Observable.create(<span class="keyword">new</span> ObservableOnSubscribe&lt;Integer&gt;() &#123;</span><br><span class="line">    <span class="comment">// 2. 在复写的subscribe（）里定义需要发送的事件</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(ObservableEmitter&lt;Integer&gt; emitter)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        emitter.onNext(<span class="number">1</span>);</span><br><span class="line">        emitter.onNext(<span class="number">2</span>);</span><br><span class="line">        emitter.onNext(<span class="number">3</span>);</span><br><span class="line">        emitter.onComplete();</span><br><span class="line">    &#125;  <span class="comment">// 至此，一个被观察者对象（Observable）就创建完毕</span></span><br><span class="line">&#125;).subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">    <span class="comment">// 以下步骤仅为展示一个完整demo，可以忽略</span></span><br><span class="line">    <span class="comment">// 3. 通过通过订阅（subscribe）连接观察者和被观察者</span></span><br><span class="line">    <span class="comment">// 4. 创建观察者 &amp; 定义响应事件的行为</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 默认最先调用复写的 onSubscribe（）</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer value)</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span>+ value  );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/2.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h3 id="快速创建-amp-发送事件"><a href="#快速创建-amp-发送事件" class="headerlink" title="快速创建 &amp; 发送事件"></a>快速创建 &amp; 发送事件</h3><p><strong>just( )</strong></p>
+<p>作用<br>完整创建1个被观察者对象（Observable）</p>
+<blockquote>
+<p>注：最多只能发送10个参数</p>
+</blockquote>
+<p>应用场景<br>快速创建 被观察者对象（Observable） &amp; 发送10个以下事件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 创建时传入整型1、2、3、4</span></span><br><span class="line"><span class="comment">// 在创建后就会发送这些对象，相当于执行了onNext(1)、onNext(2)、onNext(3)、onNext(4)</span></span><br><span class="line">Observable.just(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">        <span class="comment">// 至此，一个Observable对象创建完毕，以下步骤仅为展示一个完整demo，可以忽略</span></span><br><span class="line">        <span class="comment">// 2. 通过通过订阅（subscribe）连接观察者和被观察者</span></span><br><span class="line">        <span class="comment">// 3. 创建观察者 &amp; 定义响应事件的行为</span></span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 默认最先调用复写的 onSubscribe（）</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span>+ value  );</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/3.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>fromArray( )</strong></p>
+<p>作用</p>
+<ol>
+<li>快速创建1个被观察者对象（Observable）</li>
+<li>发送事件的特点：直接发送 传入的数组数据</li>
+</ol>
+<blockquote>
+<p>会将数组中的数据转换为Observable对象</p>
+</blockquote>
+<p>应用场景</p>
+<ol>
+<li>快速创建 被观察者对象（Observable） &amp; 发送10个以上事件（数组形式）</li>
+<li>数组元素遍历</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 设置需要传入的数组</span></span><br><span class="line">Integer[] items = &#123; <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span> &#125;;</span><br><span class="line"><span class="comment">// 2. 创建被观察者对象（Observable）时传入数组</span></span><br><span class="line"><span class="comment">// 在创建后就会将该数组转换成Observable &amp; 发送该对象中的所有数据</span></span><br><span class="line">Observable.fromArray(items)</span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span>+ value  );</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/4.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>fromIterable( )</strong></p>
+<p>作用</p>
+<ol>
+<li>快速创建1个被观察者对象（Observable）</li>
+<li>发送事件的特点：直接发送 传入的集合List数据</li>
+</ol>
+<blockquote>
+<p>会将数组中的数据转换为Observable对象</p>
+</blockquote>
+<p>应用场景</p>
+<ol>
+<li>快速创建 被观察者对象（Observable） &amp; 发送10个以上事件（集合形式）</li>
+<li>数组元素遍历</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 设置一个集合</span></span><br><span class="line">List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">list.add(<span class="number">2</span>);</span><br><span class="line">list.add(<span class="number">3</span>);</span><br><span class="line"><span class="comment">// 2. 通过fromIterable()将集合中的对象 / 数据发送出去</span></span><br><span class="line">Observable.fromIterable(list)</span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span>+ value  );</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/5.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>额外</strong></p>
+<p>// 下列方法一般用于测试使用</p>
+<p>&lt;– empty()  –&gt;<br>// 该方法创建的被观察者对象发送事件的特点：仅发送Complete事件，直接通知完成<br>Observable observable1=Observable.empty();<br>// 即观察者接收后会直接调用onCompleted（）</p>
+<p>&lt;– error()  –&gt;<br>// 该方法创建的被观察者对象发送事件的特点：仅发送Error事件，直接通知异常<br>// 可自定义异常<br>Observable observable2=Observable.error(new RuntimeException())<br>// 即观察者接收后会直接调用onError（）</p>
+<p>&lt;– never()  –&gt;<br>// 该方法创建的被观察者对象发送事件的特点：不发送任何事件<br>Observable observable3=Observable.never();<br>// 即观察者接收后什么都不调用</p>
+<h3 id="延迟创建"><a href="#延迟创建" class="headerlink" title="延迟创建"></a>延迟创建</h3><p><strong>defer( )</strong></p>
+<p>作用<br>直到有观察者（Observer ）订阅时，才动态创建被观察者对象（Observable） &amp; 发送事件</p>
+<blockquote>
+<p>通过 Observable工厂方法创建被观察者对象（Observable）<br>每次订阅后，都会得到一个刚创建的最新的Observable对象，这可以确保Observable对象里的数据是最新的</p>
+</blockquote>
+<p>应用场景<br>动态创建被观察者对象（Observable） &amp; 获取最新的Observable对象数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 第1次对i赋值</span></span><br><span class="line">Integer i = <span class="number">10</span>;</span><br><span class="line"><span class="comment">// 2. 通过defer 定义被观察者对象</span></span><br><span class="line"><span class="comment">// 注：此时被观察者对象还没创建</span></span><br><span class="line">Observable&lt;Integer&gt; observable = Observable.defer(<span class="keyword">new</span> Callable&lt;ObservableSource&lt;? extends Integer&gt;&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> ObservableSource&lt;? extends Integer&gt; call() <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">return</span> Observable.just(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 2. 第2次对i赋值</span></span><br><span class="line">i = <span class="number">15</span>;</span><br><span class="line"><span class="comment">// 3. 观察者开始订阅</span></span><br><span class="line"><span class="comment">// 注：此时，才会调用defer（）创建被观察者对象（Observable）</span></span><br><span class="line">observable.subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer value)</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到的整数是"</span> + value);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/6.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>timer( )</strong></p>
+<p>作用</p>
+<ol>
+<li>快速创建1个被观察者对象（Observable）</li>
+<li>发送事件的特点：延迟指定时间后，发送1个数值0（Long类型）</li>
+</ol>
+<blockquote>
+<p>本质 = 延迟指定时间后，调用一次 onNext(0)</p>
+</blockquote>
+<p>应用场景<br>延迟指定事件，发送一个0，一般用于检测</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 该例子 = 延迟2s后，发送一个long类型数值</span></span><br><span class="line">Observable.timer(<span class="number">2</span>, TimeUnit.SECONDS)</span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span>+ value);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"><span class="comment">// 注：timer操作符默认运行在一个新线程上</span></span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/10.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>interval( )</strong></p>
+<p>作用</p>
+<ol>
+<li>快速创建1个被观察者对象（Observable）</li>
+<li>发送事件的特点：每隔指定时间 就发送 事件</li>
+</ol>
+<blockquote>
+<p>发送的事件序列 = 从0开始、无限递增1的的整数序列</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数说明：</span></span><br><span class="line"><span class="comment">// 参数1 = 第1次延迟时间；</span></span><br><span class="line"><span class="comment">// 参数2 = 间隔时间数字；</span></span><br><span class="line"><span class="comment">// 参数3 = 时间单位；</span></span><br><span class="line">Observable.interval(<span class="number">3</span>, <span class="number">1</span>, TimeUnit.SECONDS)</span><br><span class="line">        <span class="comment">// 该例子发送的事件序列特点：延迟3s后发送事件，每隔1秒产生1个数字（从0开始递增1，无限个）</span></span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 默认最先调用复写的 onSubscribe（）</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span> + value);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"><span class="comment">// 注：interval默认在computation调度器上执行</span></span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/7.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>intervalRange( )</strong></p>
+<p>作用</p>
+<ol>
+<li>快速创建1个被观察者对象（Observable）</li>
+<li>发送事件的特点：每隔指定时间 就发送 事件，可指定发送的数据的数量</li>
+</ol>
+<blockquote>
+<p>发送的事件序列 = 从0开始、无限递增1的的整数序列<br>作用类似于interval（），但可指定发送的数据的数量</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数说明：</span></span><br><span class="line"><span class="comment">// 参数1 = 事件序列起始点；</span></span><br><span class="line"><span class="comment">// 参数2 = 事件数量；</span></span><br><span class="line"><span class="comment">// 参数3 = 第1次事件延迟发送时间；</span></span><br><span class="line"><span class="comment">// 参数4 = 间隔时间数字；</span></span><br><span class="line"><span class="comment">// 参数5 = 时间单位</span></span><br><span class="line">Observable.intervalRange(<span class="number">3</span>, <span class="number">10</span>, <span class="number">2</span>, <span class="number">1</span>, TimeUnit.SECONDS)</span><br><span class="line">        <span class="comment">// 该例子发送的事件序列特点：</span></span><br><span class="line">        <span class="comment">// 1. 从3开始，一共发送10个事件；</span></span><br><span class="line">        <span class="comment">// 2. 第1次延迟2s发送，之后每隔2秒产生1个数字（从0开始递增1，无限个）</span></span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 默认最先调用复写的 onSubscribe（）</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Long value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span> + value);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/9.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<p><strong>range( )</strong></p>
+<p>作用</p>
+<ol>
+<li>快速创建1个被观察者对象（Observable）</li>
+<li>发送事件的特点：连续发送 1个事件序列，可指定范围</li>
+</ol>
+<blockquote>
+<p>发送的事件序列 = 从0开始、无限递增1的的整数序列<br>作用类似于intervalRange（），但区别在于：无延迟发送事件</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 参数说明：</span></span><br><span class="line"><span class="comment">// 参数1 = 事件序列起始点；</span></span><br><span class="line"><span class="comment">// 参数2 = 事件数量；</span></span><br><span class="line"><span class="comment">// 注：若设置为负数，则会抛出异常</span></span><br><span class="line">Observable.range(<span class="number">3</span>, <span class="number">10</span>)</span><br><span class="line">        <span class="comment">// 该例子发送的事件序列特点：从3开始发送，每次发送事件递增1，一共发送10个事件</span></span><br><span class="line">        .subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"开始采用subscribe连接"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 默认最先调用复写的 onSubscribe（）</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer value)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"接收到了事件"</span> + value);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Error事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(<span class="string">"TAG"</span>, <span class="string">"对Complete事件作出响应"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="index/9.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+        </div>
+
+        
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </article>
+    
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>郑林飞 &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你快回来';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
